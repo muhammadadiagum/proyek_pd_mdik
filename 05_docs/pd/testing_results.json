@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-11-14T14:12:56",
+  "environment": {
+    "python": "3.11.16",
+    "flask": "3.1.2"
+  },
+  "cases": [
+    {
+      "id": "T01",
+      "name": "Aceh 2004",
+      "http_status": 200,
+      "expected": "TSUNAMI / Awas",
+      "prediction": "TSUNAMI",
+      "probability": 0.9823,
+      "warning": "Awas",
+      "range_m": "> 3.0 m",
+      "risk": "HIGH",
+      "latency_s": 1.079,
+      "pass": true
+    },
+    {
+      "id": "T02",
+      "name": "Tohoku 2011",
+      "http_status": 200,
+      "expected": "TSUNAMI / Awas",
+      "prediction": "TSUNAMI",
+      "probability": 0.9983,
+      "warning": "Awas",
+      "range_m": "> 3.0 m",
+      "risk": "HIGH",
+      "latency_s": 0.124,
+      "pass": true
+    },
+    {
+      "id": "T03",
+      "name": "Palu 2018",
+      "http_status": 200,
+      "expected": "TSUNAMI / Awas",
+      "prediction": "TSUNAMI",
+      "probability": 0.7703,
+      "warning": "Awas",
+      "range_m": "> 3.0 m",
+      "risk": "HIGH",
+      "latency_s": 0.157,
+      "pass": true
+    },
+    {
+      "id": "T04",
+      "name": "Gempa kecil M4.5",
+      "http_status": 200,
+      "expected": "NO TSUNAMI",
+      "prediction": "NO TSUNAMI",
+      "probability": 0.001,
+      "warning": "Tidak berlaku",
+      "range_m": "—",
+      "risk": "LOW",
+      "latency_s": 0.218,
+      "pass": true
+    }
+  ],
+  "validation": [
+    {
+      "id": "V01",
+      "name": "field mag kosong",
+      "http_status": 400,
+      "error": "Field \"mag\" wajib diisi",
+      "prediction": null,
+      "pass": true
+    },
+    {
+      "id": "V02",
+      "name": "mag bukan angka",
+      "http_status": 400,
+      "error": "Input tidak valid: could not convert string to float: 'abc'",
+      "prediction": null,
+      "pass": true
+    },
+    {
+      "id": "V03",
+      "name": "model tidak dikenal",
+      "http_status": 200,
+      "error": null,
+      "prediction": "NO TSUNAMI",
+      "pass": true
+    }
+  ],
+  "latency": {
+    "n": 5,
+    "samples_s": [
+      0.133,
+      0.131,
+      0.243,
+      0.211,
+      0.127
+    ],
+    "mean_s": 0.169,
+    "min_s": 0.127,
+    "max_s": 0.243
+  },
+  "cold_start": {
+    "method": "posix_fadvise(POSIX_FADV_DONTNEED) pada berkas artefak model",
+    "evicted_files": [
+      "feature_names.json",
+      "logistic_regression.pkl",
+      "metadata.json",
+      "mlp.pkl",
+      "ordinal_height.pkl",
+      "ordinal_meta.json",
+      "random_forest.pkl",
+      "scaler.pkl",
+      "scaler_lr.pkl",
+      "thresholds.json",
+      "xgboost.pkl"
+    ]
+  },
+  "cli": [
+    {
+      "id": "T01",
+      "prediction": "TSUNAMI",
+      "probability": 0.9823,
+      "warning": "Awas",
+      "applicable": true
+    },
+    {
+      "id": "T02",
+      "prediction": "TSUNAMI",
+      "probability": 0.9983,
+      "warning": "Awas",
+      "applicable": true
+    },
+    {
+      "id": "T03",
+      "prediction": "TSUNAMI",
+      "probability": 0.7703,
+      "warning": "Awas",
+      "applicable": true
+    },
+    {
+      "id": "T04",
+      "prediction": "NO TSUNAMI",
+      "probability": 0.001,
+      "warning": "Siaga",
+      "applicable": false
+    }
+  ]
+}

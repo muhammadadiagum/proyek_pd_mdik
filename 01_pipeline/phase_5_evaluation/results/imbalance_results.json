@@ -1,0 +1,37 @@
+{
+  "Original": {
+    "train_size": 248237,
+    "positive_pct": 0.25,
+    "f1": 0.2178,
+    "recall": 0.6513,
+    "cost": 5958
+  },
+  "Random Oversampling": {
+    "train_size": 495256,
+    "positive_pct": 50.0,
+    "f1": 0.2439,
+    "recall": 0.6579,
+    "cost": 5768
+  },
+  "SMOTE": {
+    "train_size": 495256,
+    "positive_pct": 50.0,
+    "f1": 0.2152,
+    "recall": 0.6513,
+    "cost": 5969
+  },
+  "ADASYN": {
+    "train_size": 495146,
+    "positive_pct": 49.99,
+    "f1": 0.201,
+    "recall": 0.6316,
+    "cost": 6307
+  },
+  "Random Undersampling": {
+    "train_size": 1218,
+    "positive_pct": 50.0,
+    "f1": 0.0705,
+    "recall": 0.9211,
+    "cost": 4882
+  }
+}

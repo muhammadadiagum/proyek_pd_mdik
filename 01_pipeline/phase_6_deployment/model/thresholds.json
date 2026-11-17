@@ -1,0 +1,141 @@
+{
+  "protocol": {
+    "source": "inner-validation 25% data latih (test tidak dipakai tuning)",
+    "cost": "FN x100 + FP x1",
+    "min_precision": 0.1,
+    "inner_val_size": 0.25,
+    "inner_seed": 7
+  },
+  "models": {
+    "xgboost": 0.13,
+    "random_forest": 0.02,
+    "logistic_regression": 0.85,
+    "mlp": 0.02,
+    "ensemble": 0.26
+  },
+  "details": {
+    "xgboost": {
+      "threshold": 0.13,
+      "selection": "min cost dengan presisi >= 0.10",
+      "at_threshold": {
+        "threshold": 0.13,
+        "cost": 4444,
+        "f1": 0.1796042617960426,
+        "recall": 0.7763157894736842,
+        "precision": 0.10154905335628227,
+        "fn": 34,
+        "fp": 1044
+      },
+      "unconstrained_cost_threshold": 0.04,
+      "unconstrained_cost": 3980,
+      "f1_optimal_threshold": 0.97,
+      "f1_optimal": {
+        "threshold": 0.97,
+        "cost": 9565,
+        "f1": 0.41605839416058393,
+        "recall": 0.375,
+        "precision": 0.4672131147540984,
+        "fn": 95,
+        "fp": 65
+      },
+      "inner_val_samples": 62060,
+      "inner_val_positives": 152
+    },
+    "random_forest": {
+      "threshold": 0.02,
+      "selection": "min cost dengan presisi >= 0.10",
+      "at_threshold": {
+        "threshold": 0.02,
+        "cost": 4257,
+        "f1": 0.19381107491856678,
+        "recall": 0.7828947368421053,
+        "precision": 0.11059479553903345,
+        "fn": 33,
+        "fp": 957
+      },
+      "unconstrained_cost_threshold": 0.01,
+      "unconstrained_cost": 4247,
+      "f1_optimal_threshold": 0.22,
+      "f1_optimal": {
+        "threshold": 0.22,
+        "cost": 8763,
+        "f1": 0.4642857142857143,
+        "recall": 0.4276315789473684,
+        "precision": 0.5078125,
+        "fn": 87,
+        "fp": 63
+      },
+      "inner_val_samples": 62060,
+      "inner_val_positives": 152
+    },
+    "logistic_regression": {
+      "threshold": 0.85,
+      "selection": "min cost dengan presisi >= 0.10",
+      "at_threshold": {
+        "threshold": 0.85,
+        "cost": 3527,
+        "f1": 0.18194740582800284,
+        "recall": 0.8421052631578947,
+        "precision": 0.10199203187250996,
+        "fn": 24,
+        "fp": 1127
+      },
+      "unconstrained_cost_threshold": 0.85,
+      "unconstrained_cost": 3527,
+      "f1_optimal_threshold": 0.99,
+      "f1_optimal": {
+        "threshold": 0.99,
+        "cost": 9299,
+        "f1": 0.3858520900321543,
+        "recall": 0.39473684210526316,
+        "precision": 0.37735849056603776,
+        "fn": 92,
+        "fp": 99
+      },
+      "inner_val_samples": 62060,
+      "inner_val_positives": 152
+    },
+    "mlp": {
+      "threshold": 0.02,
+      "selection": "min cost dengan presisi >= 0.10",
+      "at_threshold": {
+        "threshold": 0.02,
+        "cost": 3906,
+        "f1": 0.2242817423540315,
+        "recall": 0.7960526315789473,
+        "precision": 0.13052858683926646,
+        "fn": 31,
+        "fp": 806
+      },
+      "unconstrained_cost_threshold": 0.01,
+      "unconstrained_cost": 3298,
+      "f1_optimal_threshold": 0.33,
+      "f1_optimal": {
+        "threshold": 0.33,
+        "cost": 9555,
+        "f1": 0.4318181818181818,
+        "recall": 0.375,
+        "precision": 0.5089285714285714,
+        "fn": 95,
+        "fp": 55
+      },
+      "inner_val_samples": 62060,
+      "inner_val_positives": 152
+    },
+    "ensemble": {
+      "threshold": 0.26,
+      "selection": "min cost dengan presisi >= 0.10 (soft voting)",
+      "at_threshold": {
+        "threshold": 0.26,
+        "cost": 3427,
+        "f1": 0.21061359867330018,
+        "recall": 0.8355263157894737,
+        "precision": 0.1204933586337761,
+        "fn": 25,
+        "fp": 927
+      },
+      "inner_val_samples": 62060,
+      "inner_val_positives": 152
+    }
+  }
+}

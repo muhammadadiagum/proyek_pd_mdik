@@ -1,0 +1,36 @@
+{% extends "mdik/base.html" %}
+{% block title %}{{ 'Edit' if mode=='edit' else 'Tambah' }} Event — MDIK{% endblock %}
+{% block content %}
+
+<div class="panel">
+  <h2>{{ 'Edit event #' ~ event_id if mode=='edit' else 'Tambah event baru' }}</h2>
+  <form method="post" action="{{ url_for('mdik.event_edit', event_id=event_id) if mode=='edit' else url_for('mdik.event_new') }}">
+    <div class="form-grid">
+      <div><label>Tahun <span style="color:var(--high)">*</span></label><input name="year" type="number" required value="{{ event.get('year','') if event else '' }}"></div>
+      <div><label>Negara/wilayah <span style="color:var(--high)">*</span></label><input name="country" required value="{{ event.get('country','') if event else '' }}"></div>
+      <div><label>Bulan (1–12)</label><input name="month" type="number" min="1" max="12" value="{{ event.get('month','') if event else '' }}"></div>
+      <div><label>Tanggal (1–31)</label><input name="day" type="number" min="1" max="31" value="{{ event.get('day','') if event else '' }}"></div>
+      <div class="full"><label>Lokasi</label><input name="location" value="{{ event.get('location','') if event else '' }}"></div>
+      <div><label>Latitude</label><input name="latitude" type="number" step="any" value="{{ event.get('latitude','') if event else '' }}"></div>
+      <div><label>Longitude</label><input name="longitude" type="number" step="any" value="{{ event.get('longitude','') if event else '' }}"></div>
+      <div><label>Tinggi air maksimum (m)</label><input name="max_height_m" type="number" step="any" min="0" value="{{ event.get('max_height_m','') if event else '' }}"></div>
+      <div><label>Magnitudo gempa</label><input name="eq_magnitude" type="number" step="any" value="{{ event.get('eq_magnitude','') if event else '' }}"></div>
+      <div><label>Cause code NOAA</label><input name="cause_code" type="number" value="{{ event.get('cause_code','') if event else '' }}"></div>
+      <div><label>Validity NOAA</label><input name="validity" type="number" value="{{ event.get('validity','') if event else '' }}"></div>
+      <div><label>Korban meninggal</label><input name="deaths" type="number" min="0" value="{{ event.get('deaths','') if event else '' }}"></div>
+      <div><label>Hilang</label><input name="missing" type="number" min="0" value="{{ event.get('missing','') if event else '' }}"></div>
+      <div><label>Luka</label><input name="injuries" type="number" min="0" value="{{ event.get('injuries','') if event else '' }}"></div>
+      <div><label>Kerusakan (juta USD)</label><input name="damage_musd" type="number" step="any" min="0" value="{{ event.get('damage_musd','') if event else '' }}"></div>
+      <div><label>Rumah rusak</label><input name="houses_destroyed" type="number" min="0" value="{{ event.get('houses_destroyed','') if event else '' }}"></div>
+      <div><label>Rumah terendam</label><input name="houses_damaged" type="number" min="0" value="{{ event.get('houses_damaged','') if event else '' }}"></div>
+      <div class="full"><label>Catatan</label><textarea name="notes" rows="3">{{ event.get('notes','') if event else '' }}</textarea></div>
+    </div>
+    <p class="subtitle" style="margin-top:10px">Kelas bahaya dihitung otomatis dari tinggi air: Waspada ≤0,5 m; Siaga 0,5–3 m; Awas &gt;3 m. Event baru masuk status <b>perlu review</b> sampai diverifikasi analis.</p>
+    <p style="margin-top:14px">
+      <button class="btn primary" type="submit">Simpan</button>
+      <a class="btn" href="{{ url_for('mdik.event_detail', event_id=event_id) if mode=='edit' else url_for('mdik.events') }}">Batal</a>
+    </p>
+  </form>
+</div>
+
+{% endblock %}

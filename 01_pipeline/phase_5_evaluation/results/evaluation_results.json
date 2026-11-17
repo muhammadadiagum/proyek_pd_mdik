@@ -1,0 +1,182 @@
+{
+  "shap_feature_importance": [
+    {
+      "feature": "mag",
+      "importance": 3.5060834884643555
+    },
+    {
+      "feature": "depth_mag_ratio",
+      "importance": 1.3139965534210205
+    },
+    {
+      "feature": "longitude",
+      "importance": 0.7037741541862488
+    },
+    {
+      "feature": "abs_latitude",
+      "importance": 0.5354987978935242
+    },
+    {
+      "feature": "latitude",
+      "importance": 0.5334163904190063
+    },
+    {
+      "feature": "depth",
+      "importance": 0.5090257525444031
+    },
+    {
+      "feature": "monitoring_quality",
+      "importance": 0.499191015958786
+    },
+    {
+      "feature": "rms",
+      "importance": 0.41400521993637085
+    },
+    {
+      "feature": "gap",
+      "importance": 0.31379204988479614
+    },
+    {
+      "feature": "nst",
+      "importance": 0.22084027528762817
+    },
+    {
+      "feature": "dmin",
+      "importance": 0.20197856426239014
+    },
+    {
+      "feature": "era_early_2000s",
+      "importance": 0.12739738821983337
+    },
+    {
+      "feature": "tectonic_zone_other",
+      "importance": 0.10310950130224228
+    },
+    {
+      "feature": "era_late_1900s",
+      "importance": 0.08628463000059128
+    },
+    {
+      "feature": "season_djf",
+      "importance": 0.08422461897134781
+    },
+    {
+      "feature": "season_jja",
+      "importance": 0.06195000931620598
+    },
+    {
+      "feature": "era_mid_1900s",
+      "importance": 0.058910682797431946
+    },
+    {
+      "feature": "tectonic_zone_mediterranean_asian_belt",
+      "importance": 0.05756928399205208
+    },
+    {
+      "feature": "season_mam",
+      "importance": 0.04579821228981018
+    },
+    {
+      "feature": "tectonic_zone_pacific_ring_of_fire",
+      "importance": 0.037265799939632416
+    },
+    {
+      "feature": "tectonic_zone_mid_atlantic_ridge",
+      "importance": 0.034568917006254196
+    },
+    {
+      "feature": "season_son",
+      "importance": 0.034562092274427414
+    },
+    {
+      "feature": "era_early_1900s",
+      "importance": 0.02421240694820881
+    },
+    {
+      "feature": "era_modern",
+      "importance": 0.015964549034833908
+    }
+  ],
+  "threshold_tuning": {
+    "best_f1": {
+      "threshold": 0.9400000000000002,
+      "f1": 0.3687150837988827,
+      "precision": 0.32038834951456313,
+      "recall": 0.4342105263157895,
+      "cost": 8740,
+      "tp": 66,
+      "fp": 140,
+      "fn": 86,
+      "tn": 61768
+    },
+    "best_cost": {
+      "threshold": 0.12000000000000001,
+      "f1": 0.12557900154400412,
+      "precision": 0.06811836962590731,
+      "recall": 0.8026315789473685,
+      "cost": 4669,
+      "tp": 122,
+      "fp": 1669,
+      "fn": 30,
+      "tn": 60239
+    }
+  },
+  "regional_analysis": [
+    {
+      "region": "pacific_ring_of_fire",
+      "train_size": 69459,
+      "test_size": 240838,
+      "test_tsunami": 648,
+      "f1_1": 0.21868787276341947,
+      "recall_1": 0.1697530864197531,
+      "precision_1": 0.30726256983240224,
+      "auc": 0.9146245108681964,
+      "tp": 110,
+      "fp": 248,
+      "fn": 538,
+      "tn": 239942
+    },
+    {
+      "region": "mediterranean_asian_belt",
+      "train_size": 288011,
+      "test_size": 22286,
+      "test_tsunami": 78,
+      "f1_1": 0.1728395061728395,
+      "recall_1": 0.44871794871794873,
+      "precision_1": 0.10703363914373089,
+      "auc": 0.9383177348887903,
+      "tp": 35,
+      "fp": 292,
+      "fn": 43,
+      "tn": 21916
+    },
+    {
+      "region": "other",
+      "train_size": 277367,
+      "test_size": 32930,
+      "test_tsunami": 27,
+      "f1_1": 0.05157593123209169,
+      "recall_1": 0.3333333333333333,
+      "precision_1": 0.027950310559006212,
+      "auc": 0.9119324929281468,
+      "tp": 9,
+      "fp": 313,
+      "fn": 18,
+      "tn": 32590
+    },
+    {
+      "region": "mid_atlantic_ridge",
+      "train_size": 296054,
+      "test_size": 14243,
+      "test_tsunami": 8,
+      "f1_1": 0.04790419161676647,
+      "recall_1": 0.5,
+      "precision_1": 0.025157232704402517,
+      "auc": 0.9465972953986652,
+      "tp": 4,
+      "fp": 155,
+      "fn": 4,
+      "tn": 14080
+    }
+  ]
+}

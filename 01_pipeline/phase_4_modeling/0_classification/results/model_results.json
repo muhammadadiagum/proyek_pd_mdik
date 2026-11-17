@@ -1,0 +1,232 @@
+{
+  "Original": {
+    "LogisticRegression": {
+      "f1": 0.0681,
+      "recall": 0.9211,
+      "precision": 0.0353,
+      "cost": 5022,
+      "tp": 140,
+      "fp": 3822,
+      "fn": 12,
+      "tn": 58086,
+      "auc": 0.9778
+    },
+    "RandomForest": {
+      "f1": 0.3434,
+      "recall": 0.2237,
+      "precision": 0.7391,
+      "cost": 11812,
+      "tp": 34,
+      "fp": 12,
+      "fn": 118,
+      "tn": 61896,
+      "auc": 0.9734
+    },
+    "XGBoost": {
+      "f1": 0.2178,
+      "recall": 0.6513,
+      "precision": 0.1308,
+      "cost": 5958,
+      "tp": 99,
+      "fp": 658,
+      "fn": 53,
+      "tn": 61250,
+      "auc": 0.9672
+    },
+    "MLP": {
+      "f1": 0.3849,
+      "recall": 0.3026,
+      "precision": 0.5287,
+      "cost": 10641,
+      "tp": 46,
+      "fp": 41,
+      "fn": 106,
+      "tn": 61867,
+      "auc": 0.9654
+    }
+  },
+  "Random Oversampling": {
+    "LogisticRegression": {
+      "f1": 0.0681,
+      "recall": 0.9211,
+      "precision": 0.0354,
+      "cost": 5018,
+      "tp": 140,
+      "fp": 3818,
+      "fn": 12,
+      "tn": 58090,
+      "auc": 0.978
+    },
+    "RandomForest": {
+      "f1": 0.1668,
+      "recall": 0.7105,
+      "precision": 0.0945,
+      "cost": 5435,
+      "tp": 108,
+      "fp": 1035,
+      "fn": 44,
+      "tn": 60873,
+      "auc": 0.9708
+    },
+    "XGBoost": {
+      "f1": 0.1337,
+      "recall": 0.7632,
+      "precision": 0.0733,
+      "cost": 5067,
+      "tp": 116,
+      "fp": 1467,
+      "fn": 36,
+      "tn": 60441,
+      "auc": 0.9489
+    },
+    "MLP": {
+      "f1": 0.3262,
+      "recall": 0.4013,
+      "precision": 0.2748,
+      "cost": 9261,
+      "tp": 61,
+      "fp": 161,
+      "fn": 91,
+      "tn": 61747,
+      "auc": 0.9396
+    }
+  },
+  "SMOTE": {
+    "LogisticRegression": {
+      "f1": 0.0806,
+      "recall": 0.8947,
+      "precision": 0.0422,
+      "cost": 4687,
+      "tp": 136,
+      "fp": 3087,
+      "fn": 16,
+      "tn": 58821,
+      "auc": 0.978
+    },
+    "RandomForest": {
+      "f1": 0.2648,
+      "recall": 0.5461,
+      "precision": 0.1747,
+      "cost": 7292,
+      "tp": 83,
+      "fp": 392,
+      "fn": 69,
+      "tn": 61516,
+      "auc": 0.9696
+    },
+    "XGBoost": {
+      "f1": 0.1561,
+      "recall": 0.7039,
+      "precision": 0.0878,
+      "cost": 5612,
+      "tp": 107,
+      "fp": 1112,
+      "fn": 45,
+      "tn": 60796,
+      "auc": 0.9396
+    },
+    "MLP": {
+      "f1": 0.2769,
+      "recall": 0.4145,
+      "precision": 0.2079,
+      "cost": 9140,
+      "tp": 63,
+      "fp": 240,
+      "fn": 89,
+      "tn": 61668,
+      "auc": 0.9448
+    }
+  },
+  "ADASYN": {
+    "LogisticRegression": {
+      "f1": 0.0787,
+      "recall": 0.8947,
+      "precision": 0.0412,
+      "cost": 4766,
+      "tp": 136,
+      "fp": 3166,
+      "fn": 16,
+      "tn": 58742,
+      "auc": 0.978
+    },
+    "RandomForest": {
+      "f1": 0.2614,
+      "recall": 0.5461,
+      "precision": 0.1718,
+      "cost": 7300,
+      "tp": 83,
+      "fp": 400,
+      "fn": 69,
+      "tn": 61508,
+      "auc": 0.9705
+    },
+    "XGBoost": {
+      "f1": 0.1591,
+      "recall": 0.7105,
+      "precision": 0.0896,
+      "cost": 5498,
+      "tp": 108,
+      "fp": 1098,
+      "fn": 44,
+      "tn": 60810,
+      "auc": 0.9428
+    },
+    "MLP": {
+      "f1": 0.2561,
+      "recall": 0.3816,
+      "precision": 0.1927,
+      "cost": 9643,
+      "tp": 58,
+      "fp": 243,
+      "fn": 94,
+      "tn": 61665,
+      "auc": 0.9366
+    }
+  },
+  "Random Undersampling": {
+    "LogisticRegression": {
+      "f1": 0.065,
+      "recall": 0.9211,
+      "precision": 0.0337,
+      "cost": 5214,
+      "tp": 140,
+      "fp": 4014,
+      "fn": 12,
+      "tn": 57894,
+      "auc": 0.9768
+    },
+    "RandomForest": {
+      "f1": 0.0639,
+      "recall": 0.9013,
+      "precision": 0.0331,
+      "cost": 5501,
+      "tp": 137,
+      "fp": 4001,
+      "fn": 15,
+      "tn": 57907,
+      "auc": 0.9738
+    },
+    "XGBoost": {
+      "f1": 0.0342,
+      "recall": 0.9539,
+      "precision": 0.0174,
+      "cost": 8893,
+      "tp": 145,
+      "fp": 8193,
+      "fn": 7,
+      "tn": 53715,
+      "auc": 0.9697
+    },
+    "MLP": {
+      "f1": 0.0589,
+      "recall": 0.9079,
+      "precision": 0.0304,
+      "cost": 5797,
+      "tp": 138,
+      "fp": 4397,
+      "fn": 14,
+      "tn": 57511,
+      "auc": 0.972
+    }
+  }
+}

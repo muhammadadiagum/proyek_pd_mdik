@@ -1,0 +1,34 @@
+{
+  "created": "2026-11-05T14:02:06",
+  "decision": "positif = label=1 & noaa_cause_code=1; cause lain dibuang, bukan dilabeli 0",
+  "source": {
+    "path": "../../00_data/processed/prepared_dataset.csv",
+    "rows": 310369,
+    "positives": 833,
+    "md5": "fcaf2c8c0ac49e8ca3b24c7de28386cf"
+  },
+  "output": {
+    "path": "../../00_data/processed/modeling_dataset.csv",
+    "rows": 310297,
+    "positives": 761,
+    "negatives": 309536,
+    "positives_with_water_height": 610,
+    "md5": "d0695e96d0e31e6efa77a02cf8eeda28"
+  },
+  "dropped": {
+    "path": "../../00_data/processed/dropped_events.csv",
+    "rows": 72,
+    "positives": 72,
+    "negatives": 0,
+    "by_cause": {
+      "3": 55,
+      "4": 3,
+      "6": 6,
+      "7": 2,
+      "8": 2,
+      "9": 3,
+      "NaN": 1
+    }
+  },
+  "class_ratio_positive": 0.002452
+}

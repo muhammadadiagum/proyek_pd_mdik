@@ -1,0 +1,61 @@
+{% extends "mdik/base.html" %}
+{% block title %}Impor Data — MDIK{% endblock %}
+{% block content %}
+
+<div class="grid3">
+  <div class="panel" style="grid-column:span 2">
+    <h2>Impor CSV</h2>
+    <p class="subtitle" style="margin-bottom:12px">Format yang didukung: header NOAA asli (<code>Year, Mo, Dy, Country, Location Name, Latitude, Longitude, Maximum Water Height (m), ...</code>) atau header sederhana (<code>year, country, location, latitude, longitude, max_height_m</code>). Baris baru selalu masuk status <b>perlu review</b>.</p>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".csv,text/csv" required>
+      <p style="margin-top:12px"><button class="btn primary" type="submit">Impor</button></p>
+    </form>
+    <div id="preview" style="margin-top:16px"></div>
+  </div>
+  <div class="panel">
+    <h2>Aturan impor</h2>
+    <ul style="padding-left:18px;line-height:1.7;color:var(--text-dim)">
+      <li>Maksimum 5 MB per berkas.</li>
+      <li>Encoding UTF-8 (BOM boleh) atau Latin-1.</li>
+      <li>Pemisah koma, titik koma, atau tab dideteksi otomatis.</li>
+      <li>Duplikat dilewati berdasarkan hash baris.</li>
+      <li>Tahun dan negara wajib; baris tidak valid dilewati.</li>
+      <li>Semua impor tercatat di tabel <code>imports</code> dan audit log.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+const input = document.querySelector('input[type=file]');
+input.addEventListener('change', () => {
+  const box = document.getElementById('preview');
+  box.innerHTML = '';
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    const lines = e.target.result.split(/\r?\n/).filter(Boolean).slice(0, 6);
+    if (!lines.length) return;
+    const sep = lines[0].includes(';') ? ';' : (lines[0].includes('\t') ? '\t' : ',');
+    const rows = lines.map(l => l.split(sep));
+    const table = document.createElement('table');
+    rows.forEach((r, i) => {
+      const tr = document.createElement('tr');
+      r.slice(0, 8).forEach(c => {
+        const cell = document.createElement(i === 0 ? 'th' : 'td');
+        cell.textContent = c;
+        tr.appendChild(cell);
+      });
+      table.appendChild(tr);
+    });
+    const cap = document.createElement('p');
+    cap.className = 'subtitle';
+    cap.textContent = 'Pratinjau 5 baris pertama — ' + file.name;
+    box.appendChild(cap);
+    box.appendChild(table);
+  };
+  reader.readAsText(file);
+});
+</script>
+
+{% endblock %}

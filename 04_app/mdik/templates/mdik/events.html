@@ -1,0 +1,75 @@
+{% extends "mdik/base.html" %}
+{% block title %}Data Event — MDIK{% endblock %}
+{% block content %}
+
+<div class="panel" style="margin-bottom:16px">
+  <h2>Data event tsunami ({{ "{:,}".format(total).replace(",", ".") }} baris)</h2>
+  <form method="get" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:8px;align-items:end">
+    <div><label>Cari negara/lokasi</label><input name="q" value="{{ filters['q'] }}" placeholder="mis. INDONESIA"></div>
+    <div><label>Kelas</label>
+      <select name="risk">
+        <option value="">Semua</option>
+        {% for r in risks %}<option value="{{ r }}" {% if filters['risk']==r %}selected{% endif %}>{{ r }}</option>{% endfor %}
+      </select>
+    </div>
+    <div><label>Status</label>
+      <select name="status">
+        <option value="">Semua</option>
+        {% for k,v in status_labels.items() %}<option value="{{ k }}" {% if filters['status']==k %}selected{% endif %}>{{ v }}</option>{% endfor %}
+      </select>
+    </div>
+    <div><label>Dekade</label>
+      <select name="decade">
+        <option value="">Semua</option>
+        {% for d in range(1800, 2030, 10) %}<option value="{{ d }}" {% if filters['decade']==d %}selected{% endif %}>{{ d }}–{{ d+9 }}</option>{% endfor %}
+      </select>
+    </div>
+    <div><button class="btn primary" type="submit">Terapkan</button></div>
+  </form>
+  <p class="subtitle" style="margin-top:8px">
+    <a href="{{ url_for('mdik.export_csv', q=filters['q'], risk=filters['risk'], status=filters['status'], decade=filters['decade'] or '') }}" style="color:var(--accent)">Unduh hasil filter (CSV)</a>
+    {% if g.user and g.user.role in ['admin','operator'] %} · <a href="{{ url_for('mdik.event_new') }}" style="color:var(--accent)">Tambah event</a>{% endif %}
+  </p>
+</div>
+
+<div class="panel">
+  <table>
+    <thead><tr><th>ID</th><th>Tahun</th><th>Negara</th><th>Lokasi</th><th>Lat/Lon</th><th>Tinggi (m)</th><th>Kelas</th><th>Status</th><th>Aksi</th></tr></thead>
+    <tbody>
+    {% for e in events %}
+      <tr>
+        <td>{{ e['id'] }}</td>
+        <td>{{ e['year'] }}</td>
+        <td>{{ e['country'] }}</td>
+        <td><a href="{{ url_for('mdik.event_detail', event_id=e['id']) }}" style="color:var(--text)">{{ (e['location'] or '—')[:42] }}</a></td>
+        <td>{{ '%.2f'|format(e['latitude']) if e['latitude'] is not none else '—' }}, {{ '%.2f'|format(e['longitude']) if e['longitude'] is not none else '—' }}</td>
+        <td>{{ '%.2f'|format(e['max_height_m']) if e['max_height_m'] is not none else '—' }}</td>
+        <td><span class="badge {{ e['risk_level']|lower|replace(' ','_') }}">{{ e['risk_level'] }}</span></td>
+        <td><span class="badge {{ e['status'] }}">{{ status_labels[e['status']] }}</span></td>
+        <td style="white-space:nowrap">
+          <a class="btn" href="{{ url_for('mdik.event_detail', event_id=e['id']) }}">Lihat</a>
+          {% if g.user and g.user.role in ['admin','operator'] %}
+            <a class="btn" href="{{ url_for('mdik.event_edit', event_id=e['id']) }}">Edit</a>
+          {% endif %}
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="9" class="subtitle">Tidak ada data yang cocok dengan filter.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px">
+    <span class="subtitle">Halaman {{ page }} dari {{ pages }}</span>
+    <span>
+      {% if page > 1 %}
+        <a class="btn" href="{{ url_for('mdik.events', page=page-1, q=filters['q'], risk=filters['risk'], status=filters['status'], decade=filters['decade'] or '') }}">← Sebelumnya</a>
+      {% endif %}
+      {% if page < pages %}
+        <a class="btn" href="{{ url_for('mdik.events', page=page+1, q=filters['q'], risk=filters['risk'], status=filters['status'], decade=filters['decade'] or '') }}">Berikutnya →</a>
+      {% endif %}
+    </span>
+  </div>
+</div>
+
+{% endblock %}

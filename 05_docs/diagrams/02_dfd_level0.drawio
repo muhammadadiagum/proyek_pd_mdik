@@ -1,0 +1,66 @@
+<mxfile host="Electron" agent="Hermes">
+  <diagram name="DFD Level 0: Konteks Sistem Prediksi Tsunami" id="wqWxtk4v2O2BBd4Dn44C">
+    <mxGraphModel dx="1178" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1640" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="YMlaY-WvCXDdKBg1aFdX-0" />
+        <mxCell id="YMlaY-WvCXDdKBg1aFdX-1" parent="YMlaY-WvCXDdKBg1aFdX-0" />
+        <mxCell id="-5ZRosAveAGJ86ecvErG-1" parent="YMlaY-WvCXDdKBg1aFdX-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="600" width="1160" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--17" parent="YMlaY-WvCXDdKBg1aFdX-1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#1f3a5f;fontSize=24;fontStyle=1;strokeColor=none;fillColor=none;" value="DFD Level 0: Konteks Sistem Prediksi Tsunami" vertex="1">
+          <mxGeometry height="40" width="1120" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--18" parent="YMlaY-WvCXDdKBg1aFdX-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9ddf0;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=1;arcSize=8;" value="0&lt;br&gt;Sistem Prediksi&lt;br&gt;Trigger Tsunami" vertex="1">
+          <mxGeometry height="200" width="240" x="480" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--19" parent="YMlaY-WvCXDdKBg1aFdX-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="Operator BMKG /&lt;br&gt;Petugas" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--20" parent="YMlaY-WvCXDdKBg1aFdX-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="Peneliti / Analis" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--21" parent="YMlaY-WvCXDdKBg1aFdX-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="NOAA / NCEI" vertex="1">
+          <mxGeometry height="80" width="200" x="960" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--22" parent="YMlaY-WvCXDdKBg1aFdX-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="USGS" vertex="1">
+          <mxGeometry height="80" width="200" x="960" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--23" edge="1" parent="YMlaY-WvCXDdKBg1aFdX-1" source="47UK5suUAgcV4pJ9wBz--19" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;spacing=2;labelAutoRotate=1;" target="47UK5suUAgcV4pJ9wBz--18" value="parameter gempa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--24" edge="1" parent="YMlaY-WvCXDdKBg1aFdX-1" source="47UK5suUAgcV4pJ9wBz--18" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;curved=1;endArrow=classic;endFill=1;exitX=0;exitY=0.35;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitPerimeter=0;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="47UK5suUAgcV4pJ9wBz--19" value="kelas + probabilitas">
+          <mxGeometry relative="1" x="0.0035" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--25" edge="1" parent="YMlaY-WvCXDdKBg1aFdX-1" source="47UK5suUAgcV4pJ9wBz--18" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="47UK5suUAgcV4pJ9wBz--20" value="metrik &amp;amp; laporan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--26" edge="1" parent="YMlaY-WvCXDdKBg1aFdX-1" source="47UK5suUAgcV4pJ9wBz--21" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.000;exitY=0.500;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="47UK5suUAgcV4pJ9wBz--18" value="katalog tsunami">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--27" edge="1" parent="YMlaY-WvCXDdKBg1aFdX-1" source="47UK5suUAgcV4pJ9wBz--22" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.000;exitY=0.500;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;textShadow=0;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="47UK5suUAgcV4pJ9wBz--18" value="katalog gempa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--28" edge="1" parent="YMlaY-WvCXDdKBg1aFdX-1" source="47UK5suUAgcV4pJ9wBz--18" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="47UK5suUAgcV4pJ9wBz--31" value="baca/tulis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--29" edge="1" parent="YMlaY-WvCXDdKBg1aFdX-1" source="47UK5suUAgcV4pJ9wBz--18" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelAutoRotate=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacing=5;" target="47UK5suUAgcV4pJ9wBz--32" value="baca/tulis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--30" edge="1" parent="YMlaY-WvCXDdKBg1aFdX-1" source="47UK5suUAgcV4pJ9wBz--18" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="47UK5suUAgcV4pJ9wBz--33" value="baca/tulis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--31" parent="YMlaY-WvCXDdKBg1aFdX-1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=30;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fillColor=#F0F0F0;" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;D1 Data historis NOAA + USGS&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="320" x="80" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--32" parent="YMlaY-WvCXDdKBg1aFdX-1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=30;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fillColor=#F0F0F0;" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;D2 Model &amp;amp; ambang&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="320" x="440" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="47UK5suUAgcV4pJ9wBz--33" parent="YMlaY-WvCXDdKBg1aFdX-1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=30;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fillColor=#F0F0F0;" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;D3 Log prediksi&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="320" x="800" y="520" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

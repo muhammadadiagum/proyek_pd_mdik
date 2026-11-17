@@ -1,0 +1,32 @@
+{
+  "test_set": {
+    "n_total": 79150,
+    "n_tsunami": 133
+  },
+  "tp": {
+    "count": 89
+  },
+  "fn": {
+    "count": 44
+  },
+  "magnitude": {
+    "fn_mean": 5.88,
+    "fn_median": 6.05,
+    "tp_mean": 7.21,
+    "tp_median": 7.3
+  },
+  "depth": {
+    "fn_mean": 19.8,
+    "tp_mean": 34.5
+  },
+  "monitoring_quality": {
+    "fn_mean": 0.715,
+    "tp_mean": 0.749
+  },
+  "probability": {
+    "fn_mean": 0.066,
+    "fn_median": 0.007,
+    "fn_near_threshold": 4,
+    "fn_very_low": 35
+  }
+}

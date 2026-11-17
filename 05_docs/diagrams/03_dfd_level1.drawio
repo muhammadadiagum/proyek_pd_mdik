@@ -1,0 +1,100 @@
+<mxfile host="Electron" agent="Hermes">
+  <diagram id="03_dfd_level1" name="DFD Level 1: Proses Utama Sistem">
+    <mxGraphModel dx="1526" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1640" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FMr7pTAUoHCjeklWnhux-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="520" width="1440" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#1f3a5f;fontSize=24;fontStyle=1;strokeColor=none;fillColor=none;" value="DFD Level 1: Proses Utama Sistem" vertex="1">
+          <mxGeometry height="40" width="1400" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dce9f7;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=1;arcSize=8;" value="1.0&lt;br&gt;Integrasi &amp;amp; validasi" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dce9f7;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=1;arcSize=8;" value="2.0&lt;br&gt;Rekayasa fitur" vertex="1">
+          <mxGeometry height="80" width="200" x="340" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=1;arcSize=8;" value="3.0&lt;br&gt;Pelatihan &amp;amp; evaluasi" vertex="1">
+          <mxGeometry height="80" width="200" x="640" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=1;arcSize=8;" value="4.0&lt;br&gt;Inferensi berantai" vertex="1">
+          <mxGeometry height="80" width="200" x="940" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=1;arcSize=8;" value="5.0&lt;br&gt;Penyajian &amp;amp;&lt;br&gt;monitoring" vertex="1">
+          <mxGeometry height="80" width="200" x="1240" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c8" edge="1" parent="1" source="p1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacing=5;" target="FMr7pTAUoHCjeklWnhux-1" value="baca/tulis">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="177" y="618" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="03_dfd_level1_c10" edge="1" parent="1" source="p2" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacing=5;" target="FMr7pTAUoHCjeklWnhux-2" value="baca/tulis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c12" edge="1" parent="1" source="p3" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacing=5;" target="FMr7pTAUoHCjeklWnhux-3" value="baca/tulis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c14" edge="1" parent="1" source="p4" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacing=5;" target="FMr7pTAUoHCjeklWnhux-4" value="baca/tulis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c16" edge="1" parent="1" source="p5" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacing=5;" target="FMr7pTAUoHCjeklWnhux-5" value="baca/tulis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="NOAA + USGS" vertex="1">
+          <mxGeometry height="40" width="200" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c18" edge="1" parent="1" source="ext1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacing=5;" target="p1" value="katalog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;roundedPerimeter=1;glass=0;multiple=0;shadow=0;" value="Operator BMKG" vertex="1">
+          <mxGeometry height="40" width="200" x="940" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c20" edge="1" parent="1" source="ext2" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacing=5;" target="p4" value="parameter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ext3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="Pengguna" vertex="1">
+          <mxGeometry height="40" width="200" x="1240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c22" edge="1" parent="1" source="ext3" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacing=5;" target="p5" value="akses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c23" edge="1" parent="1" source="p1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="p2" value="data&amp;nbsp;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;bersih&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c24" edge="1" parent="1" source="p2" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="p3" value="fitur">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c25" edge="1" parent="1" source="p3" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="p4" value="model">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c26" edge="1" parent="1" source="p4" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="p5" value="keputusan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="03_dfd_level1_c27" edge="1" parent="1" source="p5" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;curved=1;endArrow=classic;endFill=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="ext2" value="peringatan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;fontColor=#444444;fontSize=14;fontStyle=0;strokeColor=none;fillColor=none;labelPosition=center;verticalLabelPosition=middle;" value="&lt;i&gt;&lt;b&gt;Alur utama:&lt;/b&gt; data historis -&amp;gt; fitur -&amp;gt; model -&amp;gt; inferensi -&amp;gt; peringatan. Evaluasi dan ambang dilakukan di 3.0/4.0.&lt;/i&gt;" vertex="1">
+          <mxGeometry height="40" width="1400" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="FMr7pTAUoHCjeklWnhux-1" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=30;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fillColor=#F0F0F0;" value="&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;D1&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;Data mentah&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="FMr7pTAUoHCjeklWnhux-2" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=30;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fillColor=#F0F0F0;" value="&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;D2&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;modeling_dataset&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="340" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="FMr7pTAUoHCjeklWnhux-3" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=30;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fillColor=#F0F0F0;" value="&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;D3&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;Model + ambang&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="640" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="FMr7pTAUoHCjeklWnhux-4" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=30;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fillColor=#F0F0F0;" value="&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;D4&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;Hasil prediksi&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="940" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="FMr7pTAUoHCjeklWnhux-5" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=center;spacingLeft=30;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fillColor=#F0F0F0;" value="&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;D5&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 18px; text-align: left;&quot;&gt;Log &amp;amp; metrik&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="1240" y="360" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

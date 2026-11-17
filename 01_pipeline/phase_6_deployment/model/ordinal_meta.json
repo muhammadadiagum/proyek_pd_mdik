@@ -1,0 +1,50 @@
+{
+  "model": "OrdinalCumulative(XGBClassifier)",
+  "n_classes": 3,
+  "class_names": [
+    "Waspada",
+    "Siaga",
+    "Awas"
+  ],
+  "class_ranges_m": [
+    "<= 0.5 m",
+    "0.5 - 3.0 m",
+    "> 3.0 m"
+  ],
+  "thresholds_m": [
+    0.5,
+    3.0
+  ],
+  "warning_thresholds": {
+    "t_high_p_awas": 0.25,
+    "t_mid_p_siaga_plus_awas": 0.4
+  },
+  "features": [
+    "mag",
+    "depth",
+    "nst",
+    "gap",
+    "dmin",
+    "rms",
+    "latitude",
+    "longitude",
+    "abs_latitude",
+    "depth_mag_ratio",
+    "monitoring_quality",
+    "tectonic_zone_mediterranean_asian_belt",
+    "tectonic_zone_mid_atlantic_ridge",
+    "tectonic_zone_other",
+    "tectonic_zone_pacific_ring_of_fire",
+    "era_early_1900s",
+    "era_early_2000s",
+    "era_late_1900s",
+    "era_mid_1900s",
+    "era_modern",
+    "season_djf",
+    "season_jja",
+    "season_mam",
+    "season_son"
+  ],
+  "target": "noaa_water_height -> kelas ordinal",
+  "note": "bukan prediksi meter; kelas + probabilitas + rentang"
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}MDIK — Manajemen Data & Informasi Kebencanaan{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='libs/leaflet.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    /* MDIK tambahan */
+    .nav { display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+    .nav a { color:var(--text-dim); text-decoration:none; padding:6px 10px; border-radius:8px; }
+    .nav a.active, .nav a:hover { color:var(--text); background:rgba(56,189,248,0.12); }
+    .badge { display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid var(--panel-border); color:var(--text-dim); font-size:.85rem; }
+    .badge.awas{border-color:var(--high); color:var(--high)}
+    .badge.siaga{border-color:var(--moderate); color:var(--moderate)}
+    .badge.waspada{border-color:var(--accent); color:var(--accent)}
+    .badge.terverifikasi{border-color:var(--low); color:var(--low)}
+    .badge.perlu_review{border-color:var(--moderate); color:var(--moderate)}
+    .badge.ditolak{border-color:var(--high); color:var(--high)}
+    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    @media(max-width:1100px){.grid4{grid-template-columns:repeat(2,1fr)} .grid3{grid-template-columns:1fr}}
+    table { width:100%; border-collapse:collapse; }
+    th, td { padding:10px 12px; border-bottom:1px solid var(--panel-border); text-align:left; }
+    th { color:var(--text-dim); font-weight:600; }
+    .flash { max-width:1200px; margin:12px auto 0; padding:0 24px; }
+    .flash .msg { padding:10px 14px; border-radius:10px; border:1px solid var(--panel-border); margin-bottom:8px; }
+    .flash .success{border-color:var(--low)}
+    .flash .warning{border-color:var(--moderate)}
+    .flash .error{border-color:var(--high)}
+    .form-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    .form-grid .full{grid-column:1/-1}
+    label { display:block; color:var(--text-dim); margin-bottom:6px; }
+    input, select, textarea { width:100%; background:var(--bg); color:var(--text); border:1px solid var(--panel-border); border-radius:10px; padding:8px 10px; }
+    .btn { background:transparent; color:var(--text); border:1px solid var(--panel-border); padding:8px 12px; border-radius:10px; text-decoration:none; display:inline-block; }
+    .btn.primary{border-color:var(--accent); color:var(--accent)}
+    .btn.danger{border-color:var(--high); color:var(--high)}
+    #map{height:560px; border-radius:12px; overflow:hidden;}
+  </style>
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
+      <div>
+        <h1>MDIK — Manajemen Data & Informasi Kebencanaan</h1>
+        <div class="subtitle">Tsunami Trigger Predictor • Pengelolaan data event, verifikasi, peta & audit</div>
+      </div>
+      <nav class="nav">
+        <a class="{% if active=='dashboard' %}active{% endif %}" href="{{ url_for('mdik.dashboard') }}">Dashboard</a>
+        <a class="{% if active=='events' %}active{% endif %}" href="{{ url_for('mdik.events') }}">Event</a>
+        <a class="{% if active=='map' %}active{% endif %}" href="{{ url_for('mdik.map_view') }}">Peta</a>
+        <a class="{% if active=='import' %}active{% endif %}" href="{{ url_for('mdik.import_csv') }}">Impor/ekspor</a>
+        {% if g.user and g.user.role in ['admin','analis'] %}
+        <a class="{% if active=='audit' %}active{% endif %}" href="{{ url_for('mdik.audit_log') }}">Audit</a>
+        {% endif %}
+        <a href="{{ url_for('index') }}">App PD</a>
+        {% if g.user %}
+          <span class="badge">{{ g.user.full_name }} ({{ role_labels.get(g.user.role,g.user.role) }})</span>
+          <form method="post" action="{{ url_for('mdik.logout') }}" style="display:inline">
+            <button class="btn">Keluar</button>
+          </form>
+        {% else %}
+          <a href="{{ url_for('mdik.login') }}">Masuk</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <div class="flash">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="msg {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

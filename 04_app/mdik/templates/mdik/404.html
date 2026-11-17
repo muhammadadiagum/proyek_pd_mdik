@@ -1,0 +1,9 @@
+{% extends "mdik/base.html" %}
+{% block title %}Tidak Ditemukan — MDIK{% endblock %}
+{% block content %}
+<div class="panel">
+  <h2>404 — Data tidak ditemukan</h2>
+  <p class="subtitle">Event yang Anda cari mungkin sudah dihapus atau ID-nya salah.</p>
+  <p style="margin-top:14px"><a class="btn primary" href="{{ url_for('mdik.events') }}">Kembali ke daftar event</a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+<mxfile host="Electron" agent="Hermes">
+  <diagram id="04_use_case" name="UML Use Case: Interaksi Pengguna dengan Sistem">
+    <mxGraphModel dx="1526" dy="1133" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1640" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oP-XrYWxVaR5piGNKWM6-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="720" width="1000" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#1f3a5f;fontSize=24;fontStyle=1;strokeColor=none;fillColor=none;" value="UML Use Case: Interaksi Pengguna dengan Sistem" vertex="1">
+          <mxGeometry height="40" width="960" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="frame" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#1f3a5f;verticalAlign=top;align=center;fontStyle=1;fontSize=18;fontColor=#1f3a5f;spacing=5;" value="Sistem Prediksi Tsunami" vertex="1">
+          <mxGeometry height="540" width="560" x="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uc1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dce9f7;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Unggah&lt;div&gt;data gempa&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="159" x="320" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="uc2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Prediksi&lt;br&gt;tsunami" vertex="1">
+          <mxGeometry height="80" width="159" x="320" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Lihat kelas&lt;br&gt;bahaya" vertex="1">
+          <mxGeometry height="80" width="159" x="320" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dce9f7;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Lihat peta&lt;br&gt;tsunami historis" vertex="1">
+          <mxGeometry height="80" width="159" x="320" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="uc5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Latih &amp;amp;&lt;div&gt;evaluasi model&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="159" x="560" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="uc6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dce9f7;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Lihat metrik&lt;br&gt;evaluasi" vertex="1">
+          <mxGeometry height="80" width="159" x="560" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="04_use_case_c10" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=none;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;" target="uc1" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="04_use_case_c11" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=none;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;" target="uc2" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="04_use_case_c12" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=none;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;" target="uc3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="04_use_case_c13" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=none;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;" target="uc4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="04_use_case_c14" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=none;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" target="uc5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="04_use_case_c15" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=none;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" target="uc6" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="04_use_case_c16" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=none;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" target="uc4" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="400" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;fontColor=#444444;fontSize=14;fontStyle=1;strokeColor=none;fillColor=none;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Operator menjalankan prediksi; peneliti mengevaluasi model. Kelas bahaya hanya berlaku bila klasifikasi = TSUNAMI.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="960" x="40" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="oP-XrYWxVaR5piGNKWM6-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=16;strokeColor=default;autosizeText=0;spacing=2;spacingTop=0;spacingBottom=0;labelPosition=center;align=center;labelPerimeter=1;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;Operator&lt;/span&gt;&lt;br style=&quot;font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;BMKG&lt;/span&gt;" vertex="1">
+          <mxGeometry height="120" width="60" x="90" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="oP-XrYWxVaR5piGNKWM6-5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontSize=16;strokeColor=default;autosizeText=0;spacing=2;spacingTop=0;spacingBottom=0;labelPosition=center;align=center;labelPerimeter=1;" value="&lt;b&gt;Peneliti&lt;/b&gt;" vertex="1">
+          <mxGeometry height="120" width="60" x="890" y="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,193 @@
+<mxfile host="Electron" agent="Hermes">
+  <diagram id="05_class_diagram" name="UML Class Diagram: Komponen Pipeline dan Aplikasi">
+    <mxGraphModel dx="1526" dy="1133" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1640" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KniQhjCex6gGGiRm0JHL-36" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="960" width="1360" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#1f3a5f;fontSize=24;fontStyle=1;strokeColor=none;fillColor=none;" value="UML Class Diagram: Komponen Pipeline dan Aplikasi" vertex="1">
+          <mxGeometry height="40" width="1320" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="05_class_diagram_c10" edge="1" parent="1" source="KniQhjCex6gGGiRm0JHL-2" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;entryX=0;entryY=0.889;entryDx=0;entryDy=0;exitX=1;exitY=0.889;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="KniQhjCex6gGGiRm0JHL-6" value="uses">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="250" as="sourcePoint" />
+            <mxPoint x="360" y="237.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="05_class_diagram_c11" edge="1" parent="1" source="KniQhjCex6gGGiRm0JHL-6" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1;exitY=0.889;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.9;entryDx=0;entryDy=0;entryPerimeter=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="KniQhjCex6gGGiRm0JHL-10" value="feeds">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="237.5" as="sourcePoint" />
+            <mxPoint x="710" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="05_class_diagram_c12" edge="1" parent="1" source="KniQhjCex6gGGiRm0JHL-10" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1;exitY=0.9;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.9;entryDx=0;entryDy=0;entryPerimeter=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="KniQhjCex6gGGiRm0JHL-14" value="evaluates">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="280" as="sourcePoint" />
+            <mxPoint x="1060" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="05_class_diagram_c13" edge="1" parent="1" source="KniQhjCex6gGGiRm0JHL-17" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;dashed=1;endArrow=classic;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.417;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelAutoRotate=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;curved=1;curveGeometry=1;" target="KniQhjCex6gGGiRm0JHL-12" value="extends">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="450" />
+              <mxPoint x="860.1" y="450" />
+            </Array>
+            <mxPoint x="770" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="05_class_diagram_c14" edge="1" parent="1" source="KniQhjCex6gGGiRm0JHL-21" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;dashed=1;endArrow=classic;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.583;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;curveGeometry=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;" target="KniQhjCex6gGGiRm0JHL-12" value="extends">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="470" />
+              <mxPoint x="899.9" y="470" />
+            </Array>
+            <mxPoint x="920" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="05_class_diagram_c17" edge="1" parent="1" source="KniQhjCex6gGGiRm0JHL-30" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;entryX=1;entryY=0.9;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.9;exitDx=0;exitDy=0;exitPerimeter=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" target="KniQhjCex6gGGiRm0JHL-26" value="uses">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1110" y="680" as="sourcePoint" />
+            <mxPoint x="1030" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCE9F7;" value="Dataset" vertex="1">
+          <mxGeometry height="280" width="240" x="40" y="120" as="geometry">
+            <mxRectangle height="40" width="110" x="-240" y="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-2" parent="KniQhjCex6gGGiRm0JHL-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;div&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- path: str&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- rows: int&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- features: list&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-3" parent="KniQhjCex6gGGiRm0JHL-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="10" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-4" parent="KniQhjCex6gGGiRm0JHL-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ load(): DataFrame&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ validate(): bool&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-5" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCE9F7;" value="&lt;span style=&quot;white-space: nowrap;&quot;&gt;Preprocessor&lt;/span&gt;" vertex="1">
+          <mxGeometry height="280" width="240" x="400" y="120" as="geometry">
+            <mxRectangle height="40" width="110" x="-240" y="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-6" parent="KniQhjCex6gGGiRm0JHL-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- median: dict&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- encoder: OneHot&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- scaler: StandardScaler&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-7" parent="KniQhjCex6gGGiRm0JHL-5" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="10" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-8" parent="KniQhjCex6gGGiRm0JHL-5" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ fit(df)&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ transform(df): DataFrame&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-9" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DFF0E2;" value="&lt;span style=&quot;white-space: nowrap;&quot;&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/span&gt;&lt;br style=&quot;white-space: nowrap;&quot;&gt;&lt;span style=&quot;white-space: nowrap;&quot;&gt;Model&lt;/span&gt;" vertex="1">
+          <mxGeometry height="280" width="240" x="760" y="120" as="geometry">
+            <mxRectangle height="40" width="110" x="-240" y="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-10" parent="KniQhjCex6gGGiRm0JHL-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;# name: str&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;# threshold: float&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-11" parent="KniQhjCex6gGGiRm0JHL-9" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="10" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-12" parent="KniQhjCex6gGGiRm0JHL-9" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ train(X, y)&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ predict_proba(X): array&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-13" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FDE8D0;" value="&lt;span style=&quot;white-space: nowrap;&quot;&gt;Evaluator&lt;/span&gt;" vertex="1">
+          <mxGeometry height="280" width="240" x="1120" y="120" as="geometry">
+            <mxRectangle height="40" width="110" x="-240" y="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-14" parent="KniQhjCex6gGGiRm0JHL-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- y_true, y_pred&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- cost_fn: int = 100&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-15" parent="KniQhjCex6gGGiRm0JHL-13" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="10" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-16" parent="KniQhjCex6gGGiRm0JHL-13" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ confusion(): matrix&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ metrics(): dict&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-17" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DFF0E2;" value="&lt;span style=&quot;white-space: nowrap;&quot;&gt;Classifier&lt;/span&gt;" vertex="1">
+          <mxGeometry height="280" width="240" x="40" y="520" as="geometry">
+            <mxRectangle height="40" width="110" x="-240" y="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-18" parent="KniQhjCex6gGGiRm0JHL-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- estimator&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- threshold&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-19" parent="KniQhjCex6gGGiRm0JHL-17" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="10" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-20" parent="KniQhjCex6gGGiRm0JHL-17" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ predict(X): int&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ decision(prob): bool&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-21" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DFF0E2;" value="&lt;span style=&quot;white-space: nowrap;&quot;&gt;OrdinalEstimator&lt;/span&gt;" vertex="1">
+          <mxGeometry height="280" width="240" x="400" y="520" as="geometry">
+            <mxRectangle height="40" width="110" x="-240" y="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-22" parent="KniQhjCex6gGGiRm0JHL-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- models: list&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- cutpoints: list&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-23" parent="KniQhjCex6gGGiRm0JHL-21" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="10" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-24" parent="KniQhjCex6gGGiRm0JHL-21" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ predict_class(X): int&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ warning_rule(prob): int&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-25" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#DCE9F7;" value="&lt;span style=&quot;white-space: nowrap;&quot;&gt;Predictor&lt;/span&gt;" vertex="1">
+          <mxGeometry height="280" width="240" x="760" y="520" as="geometry">
+            <mxRectangle height="40" width="110" x="-240" y="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-26" parent="KniQhjCex6gGGiRm0JHL-25" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- classifier&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- ordinal&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-27" parent="KniQhjCex6gGGiRm0JHL-25" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="10" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-28" parent="KniQhjCex6gGGiRm0JHL-25" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ predict_single(row): dict&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-29" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#FDE8D0;" value="&lt;span style=&quot;white-space: nowrap;&quot;&gt;WebApp (Flask)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="280" width="240" x="1120" y="520" as="geometry">
+            <mxRectangle height="40" width="110" x="-240" y="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-30" parent="KniQhjCex6gGGiRm0JHL-29" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- routes&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;- templates&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-31" parent="KniQhjCex6gGGiRm0JHL-29" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="10" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-32" parent="KniQhjCex6gGGiRm0JHL-29" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=18;" value="&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ GET /&lt;/span&gt;&lt;br style=&quot;color: rgb(17, 17, 17);&quot;&gt;&lt;span style=&quot;color: rgb(17, 17, 17);&quot;&gt;+ POST /predict&lt;/span&gt;" vertex="1">
+          <mxGeometry height="100" width="240" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-34" edge="1" parent="1" source="KniQhjCex6gGGiRm0JHL-28" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;exitX=0.417;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="KniQhjCex6gGGiRm0JHL-17" value="uses">
+          <mxGeometry relative="1" x="-0.8268" as="geometry">
+            <Array as="points">
+              <mxPoint x="860.1" y="840" />
+              <mxPoint x="160" y="840" />
+            </Array>
+            <mxPoint x="860" y="810" as="sourcePoint" />
+            <mxPoint x="690" y="843" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-35" edge="1" parent="1" source="KniQhjCex6gGGiRm0JHL-28" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;exitX=0.583;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;followTerminals=0;jumpStyle=arc;" target="KniQhjCex6gGGiRm0JHL-21" value="uses">
+          <mxGeometry relative="1" x="-0.5999" as="geometry">
+            <Array as="points">
+              <mxPoint x="899.9" y="880" />
+              <mxPoint x="520" y="880" />
+            </Array>
+            <mxPoint x="900" y="810" as="sourcePoint" />
+            <mxPoint x="200" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KniQhjCex6gGGiRm0JHL-37" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;fontColor=#555555;fontSize=14;fontStyle=0;strokeColor=none;fillColor=none;" value="&lt;span style=&quot;color: rgb(68, 68, 68); text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Model adalah kelas abstrak; Classifier dan OrdinalEstimator mengimplementasikan kontrak train/predict.&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="1320" x="40" y="920" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

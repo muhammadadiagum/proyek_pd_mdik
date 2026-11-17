@@ -1,0 +1,81 @@
+{% extends "mdik/base.html" %}
+{% block title %}Event {{ event['id'] }} — MDIK{% endblock %}
+{% block content %}
+
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px">
+  <div>
+    <h2 style="margin:0">{{ event['country'] }} — {{ event['location'] or 'Tanpa lokasi' }}</h2>
+    <div class="subtitle">Event #{{ event['id'] }} · {{ event['year'] }}{% if event['month'] %}-{{ '%02d'|format(event['month']) }}{% endif %}{% if event['day'] %}-{{ '%02d'|format(event['day']) }}{% endif %} · sumber {{ event['source_id'] }}</div>
+  </div>
+  <div>
+    {% if g.user and g.user.role in ['admin','operator'] %}
+      <a class="btn" href="{{ url_for('mdik.event_edit', event_id=event['id']) }}">Edit</a>
+      <form method="post" action="{{ url_for('mdik.event_delete', event_id=event['id']) }}" style="display:inline" onsubmit="return confirm('Hapus event ini? Tindakan tidak dapat dibatalkan.')">
+        <button class="btn danger">Hapus</button>
+      </form>
+    {% endif %}
+  </div>
+</div>
+
+<div class="grid3" style="margin-bottom:16px">
+  <div class="panel">
+    <div class="subtitle">Kelas bahaya</div>
+    <div style="font-size:1.8rem;font-weight:700"><span class="badge {{ event['risk_level']|lower|replace(' ','_') }}" style="font-size:1.1rem">{{ event['risk_level'] }}</span></div>
+    <div class="subtitle" style="margin-top:6px">Tinggi air maksimum: {{ '%.2f m'|format(event['max_height_m']) if event['max_height_m'] is not none else 'tidak tercatat' }}</div>
+  </div>
+  <div class="panel">
+    <div class="subtitle">Status data</div>
+    <div style="font-size:1.8rem;font-weight:700"><span class="badge {{ event['status'] }}" style="font-size:1.1rem">{{ status_labels[event['status']] }}</span></div>
+    <div class="subtitle" style="margin-top:6px">{% if event['verified_by'] %}oleh {{ event['verified_by'] }} · {{ event['verified_at'] }}{% else %}belum diverifikasi{% endif %}</div>
+  </div>
+  <div class="panel">
+    <div class="subtitle">Magnitudo gempa</div>
+    <div style="font-size:1.8rem;font-weight:700">{{ 'M%.1f'|format(event['eq_magnitude']) if event['eq_magnitude'] is not none else '—' }}</div>
+    <div class="subtitle" style="margin-top:6px">Cause code {{ event['cause_code'] if event['cause_code'] is not none else '—' }} · validity {{ event['validity'] if event['validity'] is not none else '—' }}</div>
+  </div>
+</div>
+
+<div class="grid3">
+  <div class="panel" style="grid-column:span 2">
+    <h2>Atribut event</h2>
+    <table>
+      <tr><th style="width:38%">Koordinat</th><td>{{ '%.4f'|format(event['latitude']) if event['latitude'] is not none else '—' }}, {{ '%.4f'|format(event['longitude']) if event['longitude'] is not none else '—' }}</td></tr>
+      <tr><th>Korban meninggal</th><td>{{ event['deaths'] if event['deaths'] is not none else '—' }}</td></tr>
+      <tr><th>Hilang</th><td>{{ event['missing'] if event['missing'] is not none else '—' }}</td></tr>
+      <tr><th>Luka</th><td>{{ event['injuries'] if event['injuries'] is not none else '—' }}</td></tr>
+      <tr><th>Kerusakan (juta USD)</th><td>{{ '%.2f'|format(event['damage_musd']) if event['damage_musd'] is not none else '—' }}</td></tr>
+      <tr><th>Rumah rusak/terendam</th><td>{{ event['houses_destroyed'] if event['houses_destroyed'] is not none else '—' }} / {{ event['houses_damaged'] if event['houses_damaged'] is not none else '—' }}</td></tr>
+      <tr><th>Catatan</th><td>{{ event['notes'] or '—' }}</td></tr>
+      <tr><th>Dibuat / diperbarui</th><td>{{ event['created_at'] }} / {{ event['updated_at'] }}</td></tr>
+    </table>
+  </div>
+  <div class="panel">
+    <h2>Verifikasi</h2>
+    {% if g.user and g.user.role in ['admin','analis'] %}
+      <form method="post" action="{{ url_for('mdik.event_verify', event_id=event['id']) }}" style="margin-bottom:8px">
+        <button class="btn primary" name="action" value="verify" style="width:100%">Tandai terverifikasi</button>
+      </form>
+      <form method="post" action="{{ url_for('mdik.event_verify', event_id=event['id']) }}">
+        <button class="btn danger" name="action" value="reject" style="width:100%">Tolak data</button>
+      </form>
+    {% else %}
+      <p class="subtitle">Masuk sebagai analis/admin untuk memverifikasi.</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="panel" style="margin-top:16px">
+  <h2>Jejak audit event ini</h2>
+  <table>
+    <thead><tr><th>Waktu</th><th>Pengguna</th><th>Aksi</th><th>Detail</th></tr></thead>
+    <tbody>
+    {% for a in audit %}
+      <tr><td>{{ a['ts'] }}</td><td>{{ a['username'] }}</td><td>{{ a['action'] }}</td><td>{{ a['detail'] or '—' }}</td></tr>
+    {% else %}
+      <tr><td colspan="4" class="subtitle">Belum ada jejak audit.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

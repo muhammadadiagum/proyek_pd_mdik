@@ -1,0 +1,52 @@
+<mxfile host="Electron" agent="Hermes">
+  <diagram id="02_dfd0_mdik" name="DFD Level 0: Konteks Sistem Pengelolaan Data Tsunami">
+    <mxGraphModel dx="1403" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1640" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t2UlahRRwYff40JWbhCK-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;fillColor=default;" value="" vertex="1">
+          <mxGeometry height="560" width="1160" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#1f3a5f;fontSize=24;strokeColor=none;fillColor=none;fontStyle=1" value="DFD Level 0: Konteks Sistem Pengelolaan Data Tsunami" vertex="1">
+          <mxGeometry height="40" width="1120" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="proc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9ddf0;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;fontStyle=1;fontColor=#1f3a5f;" value="0&lt;br&gt;Sistem Pengelolaan&lt;br&gt;Data &amp;amp; Informasi Tsunami" vertex="1">
+          <mxGeometry height="200" width="240" x="480" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Publik&lt;br&gt;(pengguna umum)" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Operator&lt;br&gt;(petugas data)" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Analis&lt;br&gt;(verifikator)" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="Admin&lt;br&gt;(pengelola sistem)" vertex="1">
+          <mxGeometry height="80" width="200" x="960" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;" value="NOAA / NCEI&lt;br&gt;(sumber data)" vertex="1">
+          <mxGeometry height="80" width="200" x="960" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" edge="1" parent="1" source="p1" style="rounded=0;html=1;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=block;entryX=0;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;startArrow=block;startFill=1;" target="proc" value="lihat dashboard, peta, ekspor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" edge="1" parent="1" source="p2" style="rounded=0;html=1;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=block;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;startArrow=block;startFill=1;" target="proc" value="CRUD / impor event">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" edge="1" parent="1" source="p3" style="rounded=0;html=1;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=block;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;startArrow=block;startFill=1;" target="proc" value="verifikasi / tolak + status audit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" edge="1" parent="1" source="p4" style="rounded=0;html=1;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=block;entryX=1;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;startArrow=block;startFill=1;" target="proc" value="konfigurasi / statistik">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" edge="1" parent="1" source="p5" style="rounded=0;html=1;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=block;labelAutoRotate=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;startArrow=block;startFill=1;" target="proc" value="CSV NOAA (impor awal)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" parent="1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;fontColor=#444444;fontSize=14;strokeColor=none;fillColor=none;fontStyle=2" value="Batas sistem: aplikasi Flask MDIK. Pengguna dan sumber data berada di luar batas.&lt;div&gt;Penyimpanan data (D1 events, D2 audit_log, D3 users/imports) baru digambarkan pada DFD level 1; diagram konteks hanya memuat satu proses dan entitas luar.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="1120" x="40" y="520" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

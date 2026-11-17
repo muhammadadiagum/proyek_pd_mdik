@@ -1,0 +1,165 @@
+{
+  "generated_at": "2026-11-15T17:43:31",
+  "environment": {
+    "python": "3.11.16",
+    "flask": "3.1.2",
+    "database_copy": "temporary copy (removed at end)"
+  },
+  "summary": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0,
+    "elapsed_s": 1.749
+  },
+  "cases": [
+    {
+      "id": "TC-01",
+      "scenario": "GET dashboard tanpa login",
+      "method": "GET",
+      "path": "/mdik/",
+      "expected": "HTTP 200 dan total event tampil",
+      "actual": "HTTP 200; total 3.129 event",
+      "http_status": 200,
+      "pass": true,
+      "total": 3129
+    },
+    {
+      "id": "TC-02",
+      "scenario": "Filter dekade 2000",
+      "method": "GET",
+      "path": "/mdik/events?decade=2000",
+      "expected": "HTTP 200 dan jumlah terfilter benar",
+      "actual": "HTTP 200; total 149 event",
+      "http_status": 200,
+      "pass": true,
+      "total": 149
+    },
+    {
+      "id": "TC-03",
+      "scenario": "Filter dekade 2000 + risiko Awas",
+      "method": "GET",
+      "path": "/mdik/events?decade=2000&risk=Awas",
+      "expected": "HTTP 200 dan jumlah terfilter benar",
+      "actual": "HTTP 200; total 40 event",
+      "http_status": 200,
+      "pass": true,
+      "total": 40
+    },
+    {
+      "id": "TC-04",
+      "scenario": "GET GeoJSON publik",
+      "method": "GET",
+      "path": "/mdik/api/events.geojson",
+      "expected": "HTTP 200; hanya event terverifikasi",
+      "actual": "HTTP 200; 1.337 fitur",
+      "http_status": 200,
+      "pass": true,
+      "features": 1337,
+      "expected_features": 1337
+    },
+    {
+      "id": "TC-05",
+      "scenario": "GET ekspor CSV",
+      "method": "GET",
+      "path": "/mdik/export.csv",
+      "expected": "HTTP 200; header + seluruh baris",
+      "actual": "HTTP 200; 3.129 baris data + header",
+      "http_status": 200,
+      "pass": true,
+      "rows": 3129,
+      "expected_rows": 3129
+    },
+    {
+      "id": "TC-06",
+      "scenario": "GET form tambah tanpa login",
+      "method": "GET",
+      "path": "/mdik/events/new",
+      "expected": "Dialihkan ke login",
+      "actual": "HTTP 302 ke /mdik/login?next=/mdik/events/new",
+      "http_status": 302,
+      "pass": true
+    },
+    {
+      "id": "TC-07",
+      "scenario": "Login admin",
+      "method": "POST",
+      "path": "/mdik/login",
+      "expected": "HTTP 302 ke dashboard",
+      "actual": "HTTP 302 ke /mdik/",
+      "http_status": 302,
+      "pass": true
+    },
+    {
+      "id": "TC-08",
+      "scenario": "Tambah event valid",
+      "method": "POST",
+      "path": "/mdik/events/new",
+      "expected": "HTTP 302; status perlu review; kelas Siaga",
+      "actual": "HTTP 302; ID 3130; status perlu_review; kelas Siaga",
+      "http_status": 302,
+      "pass": true,
+      "event_id": 3130
+    },
+    {
+      "id": "TC-09",
+      "scenario": "Verifikasi event oleh admin",
+      "method": "POST",
+      "path": "/mdik/events/3130/verify",
+      "expected": "HTTP 302; status terverifikasi; verifikator admin",
+      "actual": "HTTP 302; status terverifikasi; verified_by admin",
+      "http_status": 302,
+      "pass": true,
+      "event_id": 3130
+    },
+    {
+      "id": "TC-10",
+      "scenario": "Verifikasi oleh operator",
+      "method": "POST",
+      "path": "/mdik/events/3131/verify",
+      "expected": "Akses ditolak; status tidak berubah",
+      "actual": "HTTP 302 ke /mdik/; status tetap perlu_review",
+      "http_status": 302,
+      "pass": true,
+      "event_id": 3131
+    },
+    {
+      "id": "TC-11",
+      "scenario": "Hapus event oleh admin",
+      "method": "POST",
+      "path": "/mdik/events/3130/delete",
+      "expected": "HTTP 302; event terhapus",
+      "actual": "HTTP 302; baris tersisa 0",
+      "http_status": 302,
+      "pass": true,
+      "event_id": 3130
+    },
+    {
+      "id": "TC-12",
+      "scenario": "POST /predict preset Aceh 2004",
+      "method": "POST",
+      "path": "/predict",
+      "expected": "TSUNAMI; risiko HIGH; kelas Awas",
+      "actual": "HTTP 200; p=0,8072; ambang=0,26; TSUNAMI; HIGH; Awas",
+      "http_status": 200,
+      "pass": true,
+      "probability": 0.8071655593885694,
+      "threshold": 0.26,
+      "prediction": "TSUNAMI",
+      "warning": "Awas"
+    },
+    {
+      "id": "TC-13",
+      "scenario": "POST /predict gempa kecil M4,5",
+      "method": "POST",
+      "path": "/predict",
+      "expected": "NO TSUNAMI; kelas tidak berlaku",
+      "actual": "HTTP 200; p=0,00377; NO TSUNAMI; Tidak berlaku",
+      "http_status": 200,
+      "pass": true,
+      "probability": 0.0037702289344241045,
+      "threshold": 0.26,
+      "prediction": "NO TSUNAMI",
+      "warning": "Tidak berlaku"
+    }
+  ]
+}

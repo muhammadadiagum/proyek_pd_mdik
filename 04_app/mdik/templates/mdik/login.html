@@ -1,0 +1,18 @@
+{% extends "mdik/base.html" %}
+{% block title %}Masuk — MDIK{% endblock %}
+{% block content %}
+
+<div class="panel" style="max-width:440px;margin:40px auto">
+  <h2>Masuk ke MDIK</h2>
+  <form method="post">
+    <div style="margin-bottom:12px"><label>Nama pengguna</label><input name="username" required autofocus></div>
+    <div style="margin-bottom:16px"><label>Kata sandi</label><input name="password" type="password" required></div>
+    <button class="btn primary" type="submit" style="width:100%">Masuk</button>
+  </form>
+  <div class="subtitle" style="margin-top:16px;line-height:1.6">
+    Akun demo: <code>admin/admin123</code>, <code>operator/operator123</code>, <code>analis/analis123</code>.
+    Ganti kata sandi sebelum dipakai di luar demonstrasi.
+  </div>
+</div>
+
+{% endblock %}

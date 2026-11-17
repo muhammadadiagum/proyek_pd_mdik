@@ -1,0 +1,73 @@
+<mxfile host="Electron" agent="Hermes">
+  <diagram name="Alur Pipeline Data Mining Tsunami (CRISP-DM)" id="kvY13kHDI2cDMLZKCN_X">
+    <mxGraphModel dx="1178" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1640" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-0" />
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-1" parent="M63F3yyOxP2j2In-9z7Y-0" />
+        <mxCell id="mLPR_P3dpmFJ-jq8pX18-3" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="600" width="1120" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-2" parent="M63F3yyOxP2j2In-9z7Y-1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#1f3a5f;fontSize=24;fontStyle=1;strokeColor=none;fillColor=none;" value="Alur Pipeline Data Mining Tsunami (CRISP-DM)" vertex="1">
+          <mxGeometry height="40" width="1080" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-3" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="1. Pemahaman masalah&lt;br&gt;Alarm palsu TEWS" vertex="1">
+          <mxGeometry height="80" width="240" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-4" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dce9f7;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="2. Pemahaman data&lt;br&gt;NOAA + USGS" vertex="1">
+          <mxGeometry height="80" width="240" x="320" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-5" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dce9f7;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="3. Persiapan data&lt;br&gt;310.297 x 26; 761 positif" vertex="1">
+          <mxGeometry height="80" width="240" x="600" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-6" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="4. Pemodelan&lt;br&gt;LR . RF . XGB . MLP" vertex="1">
+          <mxGeometry height="80" width="240" x="880" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-7" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dce9f7;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="5. Evaluasi&lt;br&gt;F1 . AUC . cost . kalibrasi" vertex="1">
+          <mxGeometry height="80" width="240" x="880" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-8" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dff0e2;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="6. Estimasi ordinal&lt;br&gt;Waspada . Siaga . Awas" vertex="1">
+          <mxGeometry height="80" width="240" x="600" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-9" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dce9f7;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="7. Deployment&lt;br&gt;ambang per model" vertex="1">
+          <mxGeometry height="80" width="240" x="320" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-10" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fde8d0;strokeColor=#1f3a5f;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="8. Produk&lt;br&gt;Web + CLI" vertex="1">
+          <mxGeometry height="80" width="240" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-11" edge="1" parent="M63F3yyOxP2j2In-9z7Y-1" source="M63F3yyOxP2j2In-9z7Y-3" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;" target="M63F3yyOxP2j2In-9z7Y-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-12" edge="1" parent="M63F3yyOxP2j2In-9z7Y-1" source="M63F3yyOxP2j2In-9z7Y-4" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;" target="M63F3yyOxP2j2In-9z7Y-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-13" edge="1" parent="M63F3yyOxP2j2In-9z7Y-1" source="M63F3yyOxP2j2In-9z7Y-5" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=1.000;exitY=0.500;exitDx=0;exitDy=0;entryX=0.000;entryY=0.500;entryDx=0;entryDy=0;" target="M63F3yyOxP2j2In-9z7Y-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-14" edge="1" parent="M63F3yyOxP2j2In-9z7Y-1" source="M63F3yyOxP2j2In-9z7Y-6" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=16;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.500;exitY=1.000;exitDx=0;exitDy=0;entryX=0.500;entryY=0.000;entryDx=0;entryDy=0;" target="M63F3yyOxP2j2In-9z7Y-7" value="data uji">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-15" edge="1" parent="M63F3yyOxP2j2In-9z7Y-1" source="M63F3yyOxP2j2In-9z7Y-7" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.000;exitY=0.500;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" target="M63F3yyOxP2j2In-9z7Y-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-16" edge="1" parent="M63F3yyOxP2j2In-9z7Y-1" source="M63F3yyOxP2j2In-9z7Y-8" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.000;exitY=0.500;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" target="M63F3yyOxP2j2In-9z7Y-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-17" edge="1" parent="M63F3yyOxP2j2In-9z7Y-1" source="M63F3yyOxP2j2In-9z7Y-9" style="edgeStyle=none;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;endArrow=classic;endFill=1;exitX=0.000;exitY=0.500;exitDx=0;exitDy=0;entryX=1.000;entryY=0.500;entryDx=0;entryDy=0;" target="M63F3yyOxP2j2In-9z7Y-10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-18" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4f4f4;strokeColor=#888888;fontColor=#111111;fontSize=18;align=center;verticalAlign=middle;spacingLeft=6;spacingRight=6;fontStyle=0;arcSize=8;" value="Evaluasi tambahan: SHAP, ablasi fitur, kalibrasi,&lt;br&gt;baseline aturan M/depth, split temporal" vertex="1">
+          <mxGeometry height="80" width="420" x="480" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-19" edge="1" parent="M63F3yyOxP2j2In-9z7Y-1" source="M63F3yyOxP2j2In-9z7Y-18" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#333333;strokeWidth=1;fontSize=18;labelBackgroundColor=#ffffff;dashed=1;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="M63F3yyOxP2j2In-9z7Y-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-20" parent="M63F3yyOxP2j2In-9z7Y-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f7fbff;strokeColor=#1f3a5f;fontColor=#1f3a5f;fontSize=18;align=center;verticalAlign=middle;fontStyle=0;" value="Output produk: kelas peringatan + probabilitas. Tidak ada prediksi tinggi air dalam meter." vertex="1">
+          <mxGeometry height="40" width="760" x="200" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="M63F3yyOxP2j2In-9z7Y-21" parent="M63F3yyOxP2j2In-9z7Y-1" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;fontColor=#555555;fontSize=14;fontStyle=0;strokeColor=none;fillColor=none;" value="&lt;span&gt;&lt;i&gt;&lt;b&gt;Catatan:&lt;/b&gt; Garis putus-putus = aktivitas evaluasi, bukan tahap produksi.&lt;/i&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="1080" x="40" y="560" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

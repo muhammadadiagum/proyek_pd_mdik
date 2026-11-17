@@ -1,0 +1,68 @@
+{
+  "mcnemar": {
+    "XGBoost vs LogisticRegression": {
+      "chi2": 2987.0929,
+      "p": 0.0,
+      "sig": "***",
+      "b_only_n1": 3193,
+      "b_only_n2": 70
+    },
+    "XGBoost vs RandomForest": {
+      "chi2": 469.879,
+      "p": 0.0,
+      "sig": "***",
+      "b_only_n1": 66,
+      "b_only_n2": 645
+    },
+    "XGBoost vs MLP": {
+      "chi2": 466.1309,
+      "p": 0.0,
+      "sig": "***",
+      "b_only_n1": 58,
+      "b_only_n2": 622
+    },
+    "LogisticRegression vs RandomForest": {
+      "chi2": 3497.8041,
+      "p": 0.0,
+      "sig": "***",
+      "b_only_n1": 107,
+      "b_only_n2": 3809
+    },
+    "LogisticRegression vs MLP": {
+      "chi2": 3506.2183,
+      "p": 0.0,
+      "sig": "***",
+      "b_only_n1": 94,
+      "b_only_n2": 3781
+    },
+    "RandomForest vs MLP": {
+      "chi2": 3.8431,
+      "p": 0.04995,
+      "sig": "*",
+      "b_only_n1": 33,
+      "b_only_n2": 18
+    }
+  },
+  "confidence_intervals": {
+    "XGBoost": {
+      "mean": 0.218,
+      "ci_low": 0.1893,
+      "ci_high": 0.2493
+    },
+    "LogisticRegression": {
+      "mean": 0.068,
+      "ci_low": 0.0584,
+      "ci_high": 0.0788
+    },
+    "RandomForest": {
+      "mean": 0.3336,
+      "ci_low": 0.2598,
+      "ci_high": 0.4142
+    },
+    "MLP": {
+      "mean": 0.3802,
+      "ci_low": 0.3012,
+      "ci_high": 0.4445
+    }
+  }
+}

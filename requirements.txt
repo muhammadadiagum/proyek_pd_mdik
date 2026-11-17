@@ -1,0 +1,21 @@
+# Dependencies proyek PD_MDIK — Python 3.11
+# Basis: requirements.txt checkpoint .UNNAMED (versi persis) + flask untuk 04_app.
+# Setup: uv venv --python 3.11 .venv && uv pip install --python .venv/bin/python -r requirements.txt
+beautifulsoup4==4.15.0
+catboost==1.2.10
+imbalanced-learn==0.14.2
+lightgbm==4.7.0
+matplotlib==3.11.1
+numpy==2.4.6
+openpyxl==3.1.5
+pandas==3.0.5
+Pillow==12.3.0
+plotly==6.9.0
+python-docx==1.2.0
+requests==2.34.2
+scikit-learn==1.9.0
+scipy==1.17.1
+seaborn==0.13.2
+shap==0.51.0
+xgboost==3.2.0
+flask==3.1.2

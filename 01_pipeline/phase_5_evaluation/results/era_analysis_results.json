@@ -1,0 +1,247 @@
+{
+  "1900-1930": {
+    "n_samples": 3323,
+    "n_tsunami": 61,
+    "pct_tsunami": 1.836,
+    "models": {
+      "XGBoost": {
+        "f1": 0.1818,
+        "recall": 1.0,
+        "cost": 549,
+        "n_samples": 3323,
+        "n_tsunami": 61
+      },
+      "LogisticRegression": {
+        "f1": 0.0468,
+        "recall": 0.9508,
+        "cost": 2661,
+        "n_samples": 3323,
+        "n_tsunami": 61
+      },
+      "RandomForest": {
+        "f1": 0.5977,
+        "recall": 0.4262,
+        "cost": 3500,
+        "n_samples": 3323,
+        "n_tsunami": 61
+      },
+      "MLP": {
+        "f1": 0.0,
+        "recall": 0.0,
+        "cost": 6100,
+        "n_samples": 3323,
+        "n_tsunami": 61
+      },
+      "XGB (th=0.36)": {
+        "f1": 0.1442,
+        "recall": 1.0,
+        "cost": 724,
+        "n_samples": 3323,
+        "n_tsunami": 61
+      },
+      "Soft Voting": {
+        "f1": 0.246,
+        "recall": 1.0,
+        "cost": 374,
+        "n_samples": 3323,
+        "n_tsunami": 61
+      }
+    }
+  },
+  "1931-1960": {
+    "n_samples": 7218,
+    "n_tsunami": 105,
+    "pct_tsunami": 1.455,
+    "models": {
+      "XGBoost": {
+        "f1": 0.1798,
+        "recall": 1.0,
+        "cost": 958,
+        "n_samples": 7218,
+        "n_tsunami": 105
+      },
+      "LogisticRegression": {
+        "f1": 0.0477,
+        "recall": 0.9714,
+        "cost": 4370,
+        "n_samples": 7218,
+        "n_tsunami": 105
+      },
+      "RandomForest": {
+        "f1": 0.5906,
+        "recall": 0.419,
+        "cost": 6100,
+        "n_samples": 7218,
+        "n_tsunami": 105
+      },
+      "MLP": {
+        "f1": 0.1864,
+        "recall": 0.1048,
+        "cost": 9402,
+        "n_samples": 7218,
+        "n_tsunami": 105
+      },
+      "XGB (th=0.36)": {
+        "f1": 0.1422,
+        "recall": 1.0,
+        "cost": 1267,
+        "n_samples": 7218,
+        "n_tsunami": 105
+      },
+      "Soft Voting": {
+        "f1": 0.247,
+        "recall": 0.9905,
+        "cost": 733,
+        "n_samples": 7218,
+        "n_tsunami": 105
+      }
+    }
+  },
+  "1961-1990": {
+    "n_samples": 74667,
+    "n_tsunami": 215,
+    "pct_tsunami": 0.288,
+    "models": {
+      "XGBoost": {
+        "f1": 0.3282,
+        "recall": 1.0,
+        "cost": 880,
+        "n_samples": 74667,
+        "n_tsunami": 215
+      },
+      "LogisticRegression": {
+        "f1": 0.0607,
+        "recall": 0.9163,
+        "cost": 7880,
+        "n_samples": 74667,
+        "n_tsunami": 215
+      },
+      "RandomForest": {
+        "f1": 0.6262,
+        "recall": 0.4558,
+        "cost": 11700,
+        "n_samples": 74667,
+        "n_tsunami": 215
+      },
+      "MLP": {
+        "f1": 0.2574,
+        "recall": 0.1628,
+        "cost": 18022,
+        "n_samples": 74667,
+        "n_tsunami": 215
+      },
+      "XGB (th=0.36)": {
+        "f1": 0.2567,
+        "recall": 1.0,
+        "cost": 1245,
+        "n_samples": 74667,
+        "n_tsunami": 215
+      },
+      "Soft Voting": {
+        "f1": 0.384,
+        "recall": 0.9349,
+        "cost": 2031,
+        "n_samples": 74667,
+        "n_tsunami": 215
+      }
+    }
+  },
+  "1991-2015": {
+    "n_samples": 145939,
+    "n_tsunami": 247,
+    "pct_tsunami": 0.169,
+    "models": {
+      "XGBoost": {
+        "f1": 0.5483,
+        "recall": 1.0,
+        "cost": 407,
+        "n_samples": 145939,
+        "n_tsunami": 247
+      },
+      "LogisticRegression": {
+        "f1": 0.1188,
+        "recall": 0.9514,
+        "cost": 4674,
+        "n_samples": 145939,
+        "n_tsunami": 247
+      },
+      "RandomForest": {
+        "f1": 0.8618,
+        "recall": 0.7571,
+        "cost": 6000,
+        "n_samples": 145939,
+        "n_tsunami": 247
+      },
+      "MLP": {
+        "f1": 0.4658,
+        "recall": 0.3441,
+        "cost": 16233,
+        "n_samples": 145939,
+        "n_tsunami": 247
+      },
+      "XGB (th=0.36)": {
+        "f1": 0.4727,
+        "recall": 1.0,
+        "cost": 551,
+        "n_samples": 145939,
+        "n_tsunami": 247
+      },
+      "Soft Voting": {
+        "f1": 0.5769,
+        "recall": 0.9717,
+        "cost": 1045,
+        "n_samples": 145939,
+        "n_tsunami": 247
+      }
+    }
+  },
+  "2016-2026": {
+    "n_samples": 79150,
+    "n_tsunami": 133,
+    "pct_tsunami": 0.168,
+    "models": {
+      "XGBoost": {
+        "f1": 0.5212,
+        "recall": 0.6466,
+        "cost": 4811,
+        "n_samples": 79150,
+        "n_tsunami": 133
+      },
+      "LogisticRegression": {
+        "f1": 0.1664,
+        "recall": 0.8571,
+        "cost": 3023,
+        "n_samples": 79150,
+        "n_tsunami": 133
+      },
+      "RandomForest": {
+        "f1": 0.2436,
+        "recall": 0.1429,
+        "cost": 11404,
+        "n_samples": 79150,
+        "n_tsunami": 133
+      },
+      "MLP": {
+        "f1": 0.3716,
+        "recall": 0.2556,
+        "cost": 9916,
+        "n_samples": 79150,
+        "n_tsunami": 133
+      },
+      "XGB (th=0.36)": {
+        "f1": 0.5014,
+        "recall": 0.6692,
+        "cost": 4533,
+        "n_samples": 79150,
+        "n_tsunami": 133
+      },
+      "Soft Voting": {
+        "f1": 0.537,
+        "recall": 0.6541,
+        "cost": 4704,
+        "n_samples": 79150,
+        "n_tsunami": 133
+      }
+    }
+  }
+}

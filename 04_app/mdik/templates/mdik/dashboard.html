@@ -1,0 +1,112 @@
+{% extends "mdik/base.html" %}
+{% block title %}Dashboard — MDIK{% endblock %}
+{% block content %}
+
+<div class="grid4" style="margin-bottom:16px">
+  <div class="panel">
+    <div class="subtitle">Total event</div>
+    <div style="font-size:2rem;font-weight:700">{{ "{:,}".format(stats.total).replace(",", ".") }}</div>
+    <div class="subtitle">{{ stats.countries }} negara/wilayah</div>
+  </div>
+  <div class="panel">
+    <div class="subtitle">Terverifikasi</div>
+    <div style="font-size:2rem;font-weight:700;color:var(--low)">{{ "{:,}".format(stats.verified).replace(",", ".") }}</div>
+    <div class="subtitle">{{ (stats.verified / stats.total * 100 if stats.total else 0)|round(1) }}% dari total</div>
+  </div>
+  <div class="panel">
+    <div class="subtitle">Antrean review</div>
+    <div style="font-size:2rem;font-weight:700;color:var(--moderate)">{{ "{:,}".format(stats.review).replace(",", ".") }}</div>
+    <div class="subtitle"><a href="{{ url_for('mdik.events', status='perlu_review') }}" style="color:var(--accent)">Buka antrean →</a></div>
+  </div>
+  <div class="panel">
+    <div class="subtitle">Punya tinggi air</div>
+    <div style="font-size:2rem;font-weight:700">{{ "{:,}".format(stats.with_height).replace(",", ".") }}</div>
+    <div class="subtitle">{{ (stats.with_height / stats.total * 100 if stats.total else 0)|round(1) }}% cakupan atribut kunci</div>
+  </div>
+</div>
+
+<div class="grid3" style="margin-bottom:16px">
+  <div class="panel">
+    <h2>Distribusi kelas bahaya</h2>
+    {% for label in risk_order %}
+      {% set n = stats.risk[label] %}
+      <div style="display:flex;justify-content:space-between;margin-top:10px">
+        <span class="badge {{ label|lower|replace(' ','_') }}">{{ label }}</span>
+        <span>{{ "{:,}".format(n).replace(",", ".") }} ({{ risk_pct[label]|round(1) }}%)</span>
+      </div>
+      <div style="height:8px;background:#2d343e;border-radius:6px;margin-top:6px;overflow:hidden">
+        <div style="height:100%;width:{{ risk_pct[label] }}%;background:{% if label=='Awas' %}var(--high){% elif label=='Siaga' %}var(--moderate){% elif label=='Waspada' %}var(--accent){% else %}#596273{% endif %}"></div>
+      </div>
+    {% endfor %}
+    <p class="subtitle" style="margin-top:14px">Kelas diturunkan dari tinggi air maksimum: Waspada ≤0,5 m; Siaga 0,5–3 m; Awas &gt;3 m. Event tanpa tinggi air masuk “Tidak diketahui”.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Negara dengan event terbanyak</h2>
+    {% for c in stats.top_countries %}
+      <div style="display:flex;justify-content:space-between;margin-top:8px">
+        <span>{{ c['country'] }}</span><span>{{ c['n'] }}</span>
+      </div>
+      <div style="height:8px;background:#2d343e;border-radius:6px;margin-top:4px;overflow:hidden">
+        <div style="height:100%;width:{{ (c['n'] / stats.top_country_max * 100)|round(1) }}%;background:var(--accent)"></div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="panel">
+    <h2>Kualitas data</h2>
+    <table>
+      <tr><td>Koordinat lengkap</td><td>{{ "{:,}".format(stats.with_coords).replace(",", ".") }}</td></tr>
+      <tr><td>Tinggi air tercatat</td><td>{{ "{:,}".format(stats.with_height).replace(",", ".") }}</td></tr>
+      <tr><td>Perlu review</td><td>{{ "{:,}".format(stats.review).replace(",", ".") }}</td></tr>
+      <tr><td>Ditolak</td><td>{{ "{:,}".format(stats.rejected).replace(",", ".") }}</td></tr>
+      <tr><td>Sumber</td><td>NOAA/NCEI</td></tr>
+    </table>
+    <p class="subtitle" style="margin-top:14px">Event tanpa koordinat atau tinggi air otomatis masuk antrean review; analis memverifikasi sebelum dipakai publik.</p>
+  </div>
+</div>
+
+<div class="panel" style="margin-bottom:16px">
+  <h2>Event per dekade (tahun ≥ 1800)</h2>
+  <div style="display:flex;align-items:flex-end;gap:4px;height:160px;padding-top:10px">
+    {% for d in stats.decades %}
+      <div title="{{ d['decade'] }}–{{ d['decade']+9 }}: {{ d['n'] }} event" style="flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%">
+        <div style="height:{{ (d['n'] / stats.decade_max * 100)|round(1) }}%;min-height:2px;background:var(--accent);border-radius:3px 3px 0 0"></div>
+      </div>
+    {% endfor %}
+  </div>
+  <div style="display:flex;justify-content:space-between;color:var(--text-dim);font-size:.8rem;margin-top:6px">
+    <span>1800</span><span>1850</span><span>1900</span><span>1950</span><span>2000</span><span>2020</span>
+  </div>
+</div>
+
+<div class="grid3">
+  <div class="panel" style="grid-column:span 2">
+    <h2>Event terbaru</h2>
+    <table>
+      <thead><tr><th>Tahun</th><th>Negara</th><th>Lokasi</th><th>Kelas</th><th>Status</th></tr></thead>
+      <tbody>
+      {% for e in stats.recent %}
+        <tr>
+          <td>{{ e['year'] }}</td>
+          <td>{{ e['country'] }}</td>
+          <td><a href="{{ url_for('mdik.event_detail', event_id=e['id']) }}" style="color:var(--text)">{{ (e['location'] or '—')[:48] }}</a></td>
+          <td><span class="badge {{ e['risk_level']|lower|replace(' ','_') }}">{{ e['risk_level'] }}</span></td>
+          <td><span class="badge {{ e['status'] }}">{{ status_labels[e['status']] }}</span></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="panel">
+    <h2>Aksi cepat</h2>
+    <p style="margin-bottom:10px"><a class="btn primary" href="{{ url_for('mdik.event_new') }}">+ Tambah event</a></p>
+    <p style="margin-bottom:10px"><a class="btn" href="{{ url_for('mdik.import_csv') }}">Impor CSV</a></p>
+    <p style="margin-bottom:10px"><a class="btn" href="{{ url_for('mdik.export_csv') }}">Ekspor CSV</a></p>
+    <p style="margin-bottom:10px"><a class="btn" href="{{ url_for('mdik.map_view') }}">Peta sebaran</a></p>
+    <p><a class="btn" href="{{ url_for('index') }}">Model AI (PD)</a></p>
+    <p class="subtitle" style="margin-top:14px">Peran: publik (lihat), operator (CRUD/impor), analis (verifikasi/audit), admin (semua).</p>
+  </div>
+</div>
+
+{% endblock %}

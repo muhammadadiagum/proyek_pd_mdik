@@ -1,0 +1,198 @@
+{
+  "generated_at": "2026-11-03T20:35:44+08:00",
+  "source": "RapidMiner AI Studio 2026.1.1 batch run proyek_akhir.rmp (relocated)",
+  "dataset": "00_data/processed/modeling_dataset.csv",
+  "dataset_md5": "d0695e96d0e31e6efa77a02cf8eeda28",
+  "predictions_md5": "3980490417bb7015ec0c331adcd0db4f",
+  "split": {
+    "train_ratio": 0.8,
+    "test_ratio": 0.2,
+    "stratified": true,
+    "seed": 42
+  },
+  "model": {
+    "algorithm": "Random Forest",
+    "trees": 200,
+    "criterion": "gini_index",
+    "max_depth": 15,
+    "min_leaf": 1,
+    "prepruning": false,
+    "sampling": "none"
+  },
+  "n_test": 62059,
+  "n_positive_test": 152,
+  "confusion": {
+    "tp": 29,
+    "fp": 9,
+    "fn": 123,
+    "tn": 61898
+  },
+  "metrics": {
+    "accuracy": 0.997873,
+    "precision": 0.763158,
+    "recall": 0.190789,
+    "f1": 0.305263,
+    "auc": 0.956557
+  },
+  "python_reference_rf": {
+    "f1": 0.3434,
+    "precision": 0.7391,
+    "recall": 0.2237,
+    "auc": 0.9734,
+    "tp": 34,
+    "fp": 12,
+    "fn": 118,
+    "tn": 61896
+  },
+  "rapidminer_screenshot": {
+    "accuracy": 0.9979,
+    "kappa": 0.305,
+    "class_precision": {
+      "0": 0.998,
+      "1": 0.7632
+    },
+    "class_recall": {
+      "0": 0.9999,
+      "1": 0.1908
+    },
+    "weighted_mean_recall_reported": 0.5953,
+    "weighted_mean_precision_reported": 0.8806,
+    "weights": [
+      1,
+      1
+    ],
+    "note": "RapidMiner menampilkan weights 1,1; weighted mean recall/precision di sini adalah rata-rata makro (bukan support-weighted). Jangan dikutip sebagai recall/precision keseluruhan."
+  },
+  "confusion_note": "Tabel RapidMiner: baris=prediksi, kolom=aktual. TN=61898, FP=9, FN=123, TP=29.",
+  "rerun_after_filter_fix": {
+    "at": "2026-11-03T19:09-19:15+08:00",
+    "process_md5": "3e01cccbb507dedd0cc33634d7cce9a8",
+    "result": "identik dengan run sebelumnya; predictions_md5 tetap 3980490417bb7015ec0c331adcd0db4f",
+    "change": "Nominal to Numerical attributes memakai format kanonik |tectonic_zone|era|season"
+  },
+  "windows_paths": {
+    "local_repository": "RAPIDMINER_LOCAL_REPO",
+    "project_dir": "RAPIDMINER_LOCAL_REPO",
+    "process": "RAPIDMINER_LOCAL_REPO\\proyek_akhir.rmp",
+    "data_dir": "RAPIDMINER_LOCAL_REPO",
+    "dataset": "RAPIDMINER_LOCAL_REPO\\modeling_dataset.csv",
+    "predictions": "RAPIDMINER_LOCAL_REPO\\rapidminer_predictions.csv"
+  },
+  "relocated_run": {
+    "at": "2026-11-03T19:22:50-19:29:23+08:00",
+    "process_md5": "ad53c8d1cc907e04fb7ee378af98d1b9",
+    "batch_log": "batch_newpath.log",
+    "result": "exit 0; Process finished successfully after 5:46; predictions identik (md5 3980490417bb7015ec0c331adcd0db4f); TP/FP/FN/TN 29/9/123/61898; F1 0,3053; AUC 0,9566",
+    "note": "Seluruh berkas Windows dipindahkan dari folder data lama ke Local Repository\\data\\PROYEK_PD_MDIK; path Read CSV/Write CSV diperbarui."
+  },
+  "flat_layout_run": {
+    "at": "2026-11-03T20:08:33-20:14:26+08:00",
+    "process_md5": "9124eb06792e47ec635683c9701c7f56",
+    "batch_log": "batch_final.log",
+    "result": "exit 0; Process finished successfully after 5:07; predictions identik (md5 3980490417bb7015ec0c331adcd0db4f); TP/FP/FN/TN 29/9/123/61898",
+    "note": "Semua file proyek (rmp, dataset, output, log) dikonsolidasikan ke satu folder _AO\\PROYEK_PD_MDIK; tidak ada pemisahan data/process."
+  },
+  "metadata_fix": {
+    "at": "2026-11-03T20:28:47-20:35:44+08:00",
+    "process_md5": "61bf08685d0b4320d8f6077008b30216",
+    "batch_log": "batch_metadata.log",
+    "result": "exit 0; Process finished successfully after 6:14; predictions identik (md5 3980490417bb7015ec0c331adcd0db4f); TP/FP/FN/TN 29/9/123/61898",
+    "change": "Read CSV diberi data_set_meta_data_information 26 kolom (time, year, month, ... season) agar metadata atribut tersedia saat process dibuka di GUI, tanpa menunggu eksekusi.",
+    "note": "Metadata hanya untuk validasi design-time GUI; hasil eksekusi tidak berubah.",
+    "verified": true,
+    "verified_at": "2026-11-03T20:40:00+08:00",
+    "verified_note": "Pengguna membuka ulang process di AI Studio; warning pada Nominal to Numerical, Set Role, dan Performance hilang. Hasil Performance Vector tetap sama."
+  },
+  "gui_screenshots": {
+    "verified_at": "2026-11-03T23:45:01+08:00",
+    "files": {
+      "canvas": "results/screenshots/01_canvas_clean.png",
+      "read_csv": "results/screenshots/04_read_csv.png",
+      "select_attributes": [
+        "results/screenshots/05a_select_attributes_panel.png",
+        "results/screenshots/05b_select_attributes_list.png"
+      ],
+      "nominal_to_numerical": [
+        "results/screenshots/06a_nominal_panel.png",
+        "results/screenshots/06b_nominal_list.png"
+      ],
+      "set_role": "results/screenshots/07_set_role.png",
+      "split_data": "results/screenshots/08_split_data.png",
+      "random_forest": "results/screenshots/09_random_forest.png",
+      "write_csv": "results/screenshots/10_write_csv.png",
+      "performance": [
+        "results/screenshots/11a_performance_accuracy.png",
+        "results/screenshots/11b_performance_kappa.png",
+        "results/screenshots/11c_performance_weighted_recall.png",
+        "results/screenshots/11d_performance_weighted_precision.png",
+        "results/screenshots/11e_performance_text.png"
+      ]
+    },
+    "verified_values": {
+      "read_csv": {
+        "separator": ",",
+        "header_row": 1,
+        "dataset": "RAPIDMINER_LOCAL_REPO\\modeling_dataset.csv"
+      },
+      "select_attributes": {
+        "filter": "subset",
+        "n_attributes": 15
+      },
+      "nominal_to_numerical": {
+        "attributes": [
+          "era",
+          "season",
+          "tectonic_zone"
+        ],
+        "coding": "dummy coding",
+        "unexpected_value_handling": "all 0",
+        "use_underscore": true
+      },
+      "set_role": {
+        "attribute": "label",
+        "role": "label"
+      },
+      "split_data": {
+        "sampling": "stratified sampling",
+        "ratios": [
+          0.8,
+          0.2
+        ],
+        "local_seed": 42
+      },
+      "random_forest": {
+        "trees": 200,
+        "criterion": "gini index",
+        "max_depth": 15,
+        "prepruning": false,
+        "seed": 42
+      },
+      "write_csv": {
+        "path": "RAPIDMINER_LOCAL_REPO\\rapidminer_predictions.csv",
+        "separator": ",",
+        "encoding": "UTF-8"
+      },
+      "performance": {
+        "accuracy": 0.9979,
+        "kappa": 0.305,
+        "weighted_mean_recall": 0.5953,
+        "weighted_mean_precision": 0.8806,
+        "tp": 29,
+        "fp": 9,
+        "fn": 123,
+        "tn": 61898
+      }
+    },
+    "note": "Screenshot GUI final; Nominal to Numerical panel baru (233432) menggantikan panel lama yang dropdown unexpected value handling-nya kosong. Daftar 3 atribut tetap memakai 06b karena screenshot baru hanya menampilkan tombol Select Attributes. Arah confusion matrix: baris prediksi, kolom aktual."
+  },
+  "gui_layout_run": {
+    "batch_started_at": "2026-11-04T00:08:48+08:00",
+    "batch_finished_at": "2026-11-04T00:14:22+08:00",
+    "process_duration": "4:51",
+    "process_md5": "75527d4167c965d72025b57053e13f88",
+    "batch_log": "batch_gui_layout.log",
+    "result": "exit 0; Process finished successfully; predictions identik (md5 3980490417bb7015ec0c331adcd0db4f); TP/FP/FN/TN 29/9/123/61898",
+    "change": "Process disimpan ulang dari GUI setelah posisi operator dirapikan. Perubahan hanya geometri operator dan parameter default yang ditambahkan GUI; unexpected_value_handling dinormalisasi dari set to 0 menjadi all 0. Koneksi dan parameter substantif tidak berubah.",
+    "verified": true
+  }
+}

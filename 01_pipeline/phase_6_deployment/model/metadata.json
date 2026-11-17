@@ -1,0 +1,190 @@
+{
+  "model_date": "2026-11-03T10:27:56.670769",
+  "label_definition": "positif = label=1 & noaa_cause_code=1",
+  "dataset": "../../00_data/processed/modeling_dataset.csv",
+  "dataset_rows": 310297,
+  "positives": 761,
+  "config_version": "final-v2 (ordinal estimation, scale_pos_weight dari data)",
+  "features": [
+    "mag",
+    "depth",
+    "nst",
+    "gap",
+    "dmin",
+    "rms",
+    "latitude",
+    "longitude",
+    "abs_latitude",
+    "depth_mag_ratio",
+    "monitoring_quality",
+    "tectonic_zone_mediterranean_asian_belt",
+    "tectonic_zone_mid_atlantic_ridge",
+    "tectonic_zone_other",
+    "tectonic_zone_pacific_ring_of_fire",
+    "era_early_1900s",
+    "era_early_2000s",
+    "era_late_1900s",
+    "era_mid_1900s",
+    "era_modern",
+    "season_djf",
+    "season_jja",
+    "season_mam",
+    "season_son"
+  ],
+  "feature_count": 24,
+  "training_samples": 248237,
+  "test_samples": 62060,
+  "positive_ratio": 0.002452489066926203,
+  "scale_pos_weight": 406.6141215106732,
+  "thresholds": {
+    "xgboost": {
+      "threshold": 0.13,
+      "selection": "min cost dengan presisi >= 0.10"
+    },
+    "random_forest": {
+      "threshold": 0.02,
+      "selection": "min cost dengan presisi >= 0.10"
+    },
+    "logistic_regression": {
+      "threshold": 0.85,
+      "selection": "min cost dengan presisi >= 0.10"
+    },
+    "mlp": {
+      "threshold": 0.02,
+      "selection": "min cost dengan presisi >= 0.10"
+    },
+    "ensemble": {
+      "threshold": 0.26,
+      "selection": "min cost dengan presisi >= 0.10 (soft voting)"
+    }
+  },
+  "threshold_protocol": {
+    "source": "inner-validation 25% dari data latih (test tidak dipakai)",
+    "cost": "FN x100 + FP x1",
+    "min_precision": 0.1,
+    "inner_val_seed": 7,
+    "note": "ambang runtuh ke 0,01 tanpa lantai presisi (alarm palsu massal)"
+  },
+  "models_trained": [
+    "xgboost",
+    "logistic_regression",
+    "random_forest",
+    "mlp"
+  ],
+  "estimation": {
+    "type": "regression ordinal (cumulative binary decomposition)",
+    "algorithm": "XGBoost x 2 model biner",
+    "n_classes": 3,
+    "class_names": [
+      "Waspada",
+      "Siaga",
+      "Awas"
+    ],
+    "class_ranges_m": [
+      "<= 0.5 m",
+      "0.5 - 3.0 m",
+      "> 3.0 m"
+    ],
+    "thresholds_m": [
+      0.5,
+      3.0
+    ],
+    "warning_thresholds": [
+      0.25,
+      0.4
+    ],
+    "subset_samples": 610,
+    "holdout_metrics": {
+      "qwk": 0.4667,
+      "mae_class": 0.4016,
+      "exact_acc": 0.6393,
+      "adjacent_acc": 0.959,
+      "per_class": {
+        "class_0": {
+          "precision": 0.7159,
+          "recall": 0.863,
+          "f1": 0.7826,
+          "support": 73
+        },
+        "class_1": {
+          "precision": 0.3704,
+          "recall": 0.3125,
+          "f1": 0.339,
+          "support": 32
+        },
+        "class_2": {
+          "precision": 0.7143,
+          "recall": 0.2941,
+          "f1": 0.4167,
+          "support": 17
+        }
+      },
+      "confusion": [
+        [
+          63,
+          10,
+          0
+        ],
+        [
+          20,
+          10,
+          2
+        ],
+        [
+          5,
+          7,
+          5
+        ]
+      ],
+      "n": 122,
+      "warning_rule": {
+        "qwk": 0.432,
+        "mae_class": 0.4426,
+        "exact_acc": 0.623,
+        "adjacent_acc": 0.9344,
+        "per_class": {
+          "class_0": {
+            "precision": 0.7308,
+            "recall": 0.7808,
+            "f1": 0.755,
+            "support": 73
+          },
+          "class_1": {
+            "precision": 0.4,
+            "recall": 0.375,
+            "f1": 0.3871,
+            "support": 32
+          },
+          "class_2": {
+            "precision": 0.5,
+            "recall": 0.4118,
+            "f1": 0.4516,
+            "support": 17
+          }
+        },
+        "confusion": [
+          [
+            57,
+            13,
+            3
+          ],
+          [
+            16,
+            12,
+            4
+          ],
+          [
+            5,
+            5,
+            7
+          ]
+        ],
+        "n": 122
+      },
+      "warning_thresholds": {
+        "t_high_p_awas": 0.25,
+        "t_mid_p_siaga_plus_awas": 0.4
+      }
+    }
+  }
+}

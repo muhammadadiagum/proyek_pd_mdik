@@ -1,0 +1,23 @@
+{% extends "mdik/base.html" %}
+{% block title %}Audit Log — MDIK{% endblock %}
+{% block content %}
+
+<div class="panel">
+  <h2>Jejak audit sistem</h2>
+  <table>
+    <thead><tr><th>ID</th><th>Waktu</th><th>Pengguna</th><th>Aksi</th><th>Entitas</th><th>ID entitas</th><th>Detail</th></tr></thead>
+    <tbody>
+    {% for a in rows %}
+      <tr><td>{{ a['id'] }}</td><td>{{ a['ts'] }}</td><td>{{ a['username'] or 'system' }}</td><td>{{ a['action'] }}</td><td>{{ a['entity'] }}</td><td>{{ a['entity_id'] or '—' }}</td><td>{{ a['detail'] or '—' }}</td></tr>
+    {% else %}
+      <tr><td colspan="7" class="subtitle">Belum ada jejak audit.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <div style="display:flex;justify-content:space-between;margin-top:16px">
+    <span class="subtitle">Halaman {{ page }}</span>
+    <a class="btn" href="{{ url_for('mdik.audit_log', page=page+1) }}">Berikutnya →</a>
+  </div>
+</div>
+
+{% endblock %}

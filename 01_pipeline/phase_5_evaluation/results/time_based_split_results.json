@@ -1,0 +1,421 @@
+{
+  "config": {
+    "random_split": "train_test_split(test_size=0.2, stratify=y, random_state=42)",
+    "time_based_split": "train: year<=2015, test: year>=2016",
+    "bootstrap_n": 100
+  },
+  "random_split": {
+    "XGBoost": {
+      "f1": 0.2178,
+      "recall": 0.6513,
+      "precision": 0.1308,
+      "cost": 5958,
+      "tp": 99,
+      "fp": 658,
+      "fn": 53,
+      "tn": 61250,
+      "auc": 0.9672,
+      "ci": {
+        "mean": 0.2191,
+        "ci_low": 0.1849,
+        "ci_high": 0.2524
+      }
+    },
+    "LogisticRegression": {
+      "f1": 0.0679,
+      "recall": 0.9211,
+      "precision": 0.0353,
+      "cost": 5031,
+      "tp": 140,
+      "fp": 3831,
+      "fn": 12,
+      "tn": 58077,
+      "auc": 0.9782,
+      "ci": {
+        "mean": 0.0669,
+        "ci_low": 0.056,
+        "ci_high": 0.0759
+      }
+    },
+    "RandomForest": {
+      "f1": 0.3434,
+      "recall": 0.2237,
+      "precision": 0.7391,
+      "cost": 11812,
+      "tp": 34,
+      "fp": 12,
+      "fn": 118,
+      "tn": 61896,
+      "auc": 0.9734,
+      "ci": {
+        "mean": 0.3452,
+        "ci_low": 0.2493,
+        "ci_high": 0.4541
+      }
+    },
+    "MLP": {
+      "f1": 0.3849,
+      "recall": 0.3026,
+      "precision": 0.5287,
+      "cost": 10641,
+      "tp": 46,
+      "fp": 41,
+      "fn": 106,
+      "tn": 61867,
+      "auc": 0.9654,
+      "ci": {
+        "mean": 0.3781,
+        "ci_low": 0.299,
+        "ci_high": 0.4632
+      }
+    },
+    "Soft Voting": {
+      "f1": 0.2245,
+      "recall": 0.6513,
+      "precision": 0.1356,
+      "cost": 5931,
+      "tp": 99,
+      "fp": 631,
+      "fn": 53,
+      "tn": 61277,
+      "auc": 0.9786,
+      "ci": {
+        "mean": 0.2232,
+        "ci_low": 0.1947,
+        "ci_high": 0.249
+      }
+    },
+    "XGB (th=0.36)": {
+      "f1": 0.1896,
+      "recall": 0.7105,
+      "precision": 0.1094,
+      "cost": 5279,
+      "tp": 108,
+      "fp": 879,
+      "fn": 44,
+      "tn": 61029,
+      "auc": 0.9672,
+      "ci": {
+        "mean": 0.192,
+        "ci_low": 0.162,
+        "ci_high": 0.2202
+      }
+    }
+  },
+  "time_based_split": {
+    "XGBoost": {
+      "f1": 0.5212,
+      "recall": 0.6466,
+      "precision": 0.4365,
+      "cost": 4811,
+      "tp": 86,
+      "fp": 111,
+      "fn": 47,
+      "tn": 78906,
+      "auc": 0.9454,
+      "ci": {
+        "mean": 0.5233,
+        "ci_low": 0.4533,
+        "ci_high": 0.586
+      }
+    },
+    "LogisticRegression": {
+      "f1": 0.1664,
+      "recall": 0.8571,
+      "precision": 0.0922,
+      "cost": 3023,
+      "tp": 114,
+      "fp": 1123,
+      "fn": 19,
+      "tn": 77894,
+      "auc": 0.9595,
+      "ci": {
+        "mean": 0.1643,
+        "ci_low": 0.1408,
+        "ci_high": 0.1882
+      }
+    },
+    "RandomForest": {
+      "f1": 0.2436,
+      "recall": 0.1429,
+      "precision": 0.8261,
+      "cost": 11404,
+      "tp": 19,
+      "fp": 4,
+      "fn": 114,
+      "tn": 79013,
+      "auc": 0.9435,
+      "ci": {
+        "mean": 0.2388,
+        "ci_low": 0.1444,
+        "ci_high": 0.3248
+      }
+    },
+    "MLP": {
+      "f1": 0.3716,
+      "recall": 0.2556,
+      "precision": 0.68,
+      "cost": 9916,
+      "tp": 34,
+      "fp": 16,
+      "fn": 99,
+      "tn": 79001,
+      "auc": 0.9463,
+      "ci": {
+        "mean": 0.3732,
+        "ci_low": 0.2927,
+        "ci_high": 0.4666
+      }
+    },
+    "Soft Voting": {
+      "f1": 0.5228,
+      "recall": 0.6466,
+      "precision": 0.4388,
+      "cost": 4810,
+      "tp": 86,
+      "fp": 110,
+      "fn": 47,
+      "tn": 78907,
+      "auc": 0.9593,
+      "ci": {
+        "mean": 0.5198,
+        "ci_low": 0.4515,
+        "ci_high": 0.5714
+      }
+    },
+    "XGB (th=0.36)": {
+      "f1": 0.5014,
+      "recall": 0.6692,
+      "precision": 0.4009,
+      "cost": 4533,
+      "tp": 89,
+      "fp": 133,
+      "fn": 44,
+      "tn": 78884,
+      "auc": 0.9454,
+      "ci": {
+        "mean": 0.5003,
+        "ci_low": 0.4355,
+        "ci_high": 0.5688
+      }
+    }
+  },
+  "comparison": {
+    "XGBoost": {
+      "random": {
+        "f1": 0.2178,
+        "recall": 0.6513,
+        "precision": 0.1308,
+        "cost": 5958,
+        "tp": 99,
+        "fp": 658,
+        "fn": 53,
+        "tn": 61250,
+        "auc": 0.9672,
+        "ci": {
+          "mean": 0.2191,
+          "ci_low": 0.1849,
+          "ci_high": 0.2524
+        }
+      },
+      "time_based": {
+        "f1": 0.5212,
+        "recall": 0.6466,
+        "precision": 0.4365,
+        "cost": 4811,
+        "tp": 86,
+        "fp": 111,
+        "fn": 47,
+        "tn": 78906,
+        "auc": 0.9454,
+        "ci": {
+          "mean": 0.5233,
+          "ci_low": 0.4533,
+          "ci_high": 0.586
+        }
+      },
+      "delta_f1": 0.3034,
+      "delta_recall": -0.0047
+    },
+    "LogisticRegression": {
+      "random": {
+        "f1": 0.0679,
+        "recall": 0.9211,
+        "precision": 0.0353,
+        "cost": 5031,
+        "tp": 140,
+        "fp": 3831,
+        "fn": 12,
+        "tn": 58077,
+        "auc": 0.9782,
+        "ci": {
+          "mean": 0.0669,
+          "ci_low": 0.056,
+          "ci_high": 0.0759
+        }
+      },
+      "time_based": {
+        "f1": 0.1664,
+        "recall": 0.8571,
+        "precision": 0.0922,
+        "cost": 3023,
+        "tp": 114,
+        "fp": 1123,
+        "fn": 19,
+        "tn": 77894,
+        "auc": 0.9595,
+        "ci": {
+          "mean": 0.1643,
+          "ci_low": 0.1408,
+          "ci_high": 0.1882
+        }
+      },
+      "delta_f1": 0.0985,
+      "delta_recall": -0.064
+    },
+    "RandomForest": {
+      "random": {
+        "f1": 0.3434,
+        "recall": 0.2237,
+        "precision": 0.7391,
+        "cost": 11812,
+        "tp": 34,
+        "fp": 12,
+        "fn": 118,
+        "tn": 61896,
+        "auc": 0.9734,
+        "ci": {
+          "mean": 0.3452,
+          "ci_low": 0.2493,
+          "ci_high": 0.4541
+        }
+      },
+      "time_based": {
+        "f1": 0.2436,
+        "recall": 0.1429,
+        "precision": 0.8261,
+        "cost": 11404,
+        "tp": 19,
+        "fp": 4,
+        "fn": 114,
+        "tn": 79013,
+        "auc": 0.9435,
+        "ci": {
+          "mean": 0.2388,
+          "ci_low": 0.1444,
+          "ci_high": 0.3248
+        }
+      },
+      "delta_f1": -0.0998,
+      "delta_recall": -0.0808
+    },
+    "MLP": {
+      "random": {
+        "f1": 0.3849,
+        "recall": 0.3026,
+        "precision": 0.5287,
+        "cost": 10641,
+        "tp": 46,
+        "fp": 41,
+        "fn": 106,
+        "tn": 61867,
+        "auc": 0.9654,
+        "ci": {
+          "mean": 0.3781,
+          "ci_low": 0.299,
+          "ci_high": 0.4632
+        }
+      },
+      "time_based": {
+        "f1": 0.3716,
+        "recall": 0.2556,
+        "precision": 0.68,
+        "cost": 9916,
+        "tp": 34,
+        "fp": 16,
+        "fn": 99,
+        "tn": 79001,
+        "auc": 0.9463,
+        "ci": {
+          "mean": 0.3732,
+          "ci_low": 0.2927,
+          "ci_high": 0.4666
+        }
+      },
+      "delta_f1": -0.0133,
+      "delta_recall": -0.047
+    },
+    "Soft Voting": {
+      "random": {
+        "f1": 0.2245,
+        "recall": 0.6513,
+        "precision": 0.1356,
+        "cost": 5931,
+        "tp": 99,
+        "fp": 631,
+        "fn": 53,
+        "tn": 61277,
+        "auc": 0.9786,
+        "ci": {
+          "mean": 0.2232,
+          "ci_low": 0.1947,
+          "ci_high": 0.249
+        }
+      },
+      "time_based": {
+        "f1": 0.5228,
+        "recall": 0.6466,
+        "precision": 0.4388,
+        "cost": 4810,
+        "tp": 86,
+        "fp": 110,
+        "fn": 47,
+        "tn": 78907,
+        "auc": 0.9593,
+        "ci": {
+          "mean": 0.5198,
+          "ci_low": 0.4515,
+          "ci_high": 0.5714
+        }
+      },
+      "delta_f1": 0.2983,
+      "delta_recall": -0.0047
+    },
+    "XGB (th=0.36)": {
+      "random": {
+        "f1": 0.1896,
+        "recall": 0.7105,
+        "precision": 0.1094,
+        "cost": 5279,
+        "tp": 108,
+        "fp": 879,
+        "fn": 44,
+        "tn": 61029,
+        "auc": 0.9672,
+        "ci": {
+          "mean": 0.192,
+          "ci_low": 0.162,
+          "ci_high": 0.2202
+        }
+      },
+      "time_based": {
+        "f1": 0.5014,
+        "recall": 0.6692,
+        "precision": 0.4009,
+        "cost": 4533,
+        "tp": 89,
+        "fp": 133,
+        "fn": 44,
+        "tn": 78884,
+        "auc": 0.9454,
+        "ci": {
+          "mean": 0.5003,
+          "ci_low": 0.4355,
+          "ci_high": 0.5688
+        }
+      },
+      "delta_f1": 0.3118,
+      "delta_recall": -0.0413
+    }
+  }
+}
